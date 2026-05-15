@@ -179,7 +179,7 @@
 
 	<!-- Decorative Flowing Data Lines -->
 	<div
-		class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden flex flex-col justify-around py-32 opacity-40 dark:opacity-50">
+		class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden flex flex-col justify-around py-32 opacity-30 dark:opacity-40">
 		<div
 			class="w-1/2 h-[2px] bg-blue-500 dark:bg-blue-400 shadow-[0_0_8px_rgba(59,130,246,0.8)] rounded-full animate-data-flow-1">
 		</div>
@@ -321,7 +321,7 @@
 
 			<div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
 				<article
-					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="100">
 					<div
 						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
@@ -334,7 +334,7 @@
 				</article>
 
 				<article
-					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="200">
 					<div
 						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
@@ -349,7 +349,7 @@
 				</article>
 
 				<article
-					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="300">
 					<div
 						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
@@ -496,8 +496,8 @@
 				</div>
 
 				<div class="flex flex-col justify-center items-start md:mt-16 lg:mt-24" data-aos="fade-left">
-					<button id="openModalBtn" onclick="openModal()"
-						class="inline-flex items-center justify-center gap-3 bg-blue-600 text-white font-bold text-lg rounded-xl px-10 py-5 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 transition-all duration-300">
+					<button id="openModalBtn"
+						class="relative z-50 inline-flex items-center justify-center gap-3 bg-blue-600 text-white font-bold text-lg rounded-xl px-10 py-5 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 transition-all duration-300">
 						Konsultasi Sekarang
 						<i class="fa-solid fa-arrow-right"></i>
 					</button>
@@ -697,9 +697,9 @@
 
 	<!-- Order Modal -->
 	<div id="consultationModal"
-		class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-all duration-300 px-4">
+		class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-all duration-300 px-4">
 		<div id="modalContent" class="relative w-full max-w-2xl transform transition-transform duration-300">
-			<button id="closeModalBtn" onclick="closeModal()"
+			<button id="closeModalBtn"
 				class="absolute top-4 right-4 z-10 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
 				aria-label="Close modal">
 				<i class="fa-solid fa-xmark text-2xl"></i>
