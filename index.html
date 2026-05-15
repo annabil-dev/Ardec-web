@@ -388,8 +388,8 @@
 							<figure
 								class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-4 transition-all duration-300 transform cursor-pointer hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/600x420/?embedded"
-									alt="Sistem Kontrol Suhu Presisi" class="w-full h-56 object-cover rounded-xl dark:opacity-90"
-									loading="lazy" />
+									alt="Sistem Kontrol Suhu Presisi"
+									class="w-full h-56 object-cover rounded-xl dark:opacity-90" loading="lazy" />
 								<figcaption class="p-6">
 									<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Sistem Kontrol Suhu
 										Presisi</div>
@@ -400,8 +400,8 @@
 							<figure
 								class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-4 transition-all duration-300 transform cursor-pointer hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/600x420/?robot-arm"
-									alt="Trainer Robotika Dasar" class="w-full h-56 object-cover rounded-xl dark:opacity-90"
-									loading="lazy" />
+									alt="Trainer Robotika Dasar"
+									class="w-full h-56 object-cover rounded-xl dark:opacity-90" loading="lazy" />
 								<figcaption class="p-6">
 									<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Trainer Robotika
 										Dasar</div>
@@ -423,8 +423,8 @@
 							<figure
 								class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-4 transition-all duration-300 transform cursor-pointer hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/600x420/?iot"
-									alt="Dashboard Monitoring IoT" class="w-full h-56 object-cover rounded-xl dark:opacity-90"
-									loading="lazy" />
+									alt="Dashboard Monitoring IoT"
+									class="w-full h-56 object-cover rounded-xl dark:opacity-90" loading="lazy" />
 								<figcaption class="p-6">
 									<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Dashboard Monitoring
 										IoT</div>
@@ -647,7 +647,7 @@
 
 			if (openModalBtn) openModalBtn.addEventListener('click', openModal);
 			if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-			
+
 			// Close on backdrop click
 			if (orderModal) {
 				orderModal.addEventListener('click', (e) => {
@@ -696,77 +696,77 @@
 	</script>
 
 	<!-- Order Modal -->
-	<div id="orderModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 px-4">
+	<div id="orderModal"
+		class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 px-4">
 		<div id="modalContent" class="relative w-full max-w-2xl transform scale-95 transition-transform duration-300">
-			<button id="closeModalBtn" class="absolute top-4 right-4 z-10 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="Close modal">
+			<button id="closeModalBtn"
+				class="absolute top-4 right-4 z-10 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+				aria-label="Close modal">
 				<i class="fa-solid fa-xmark text-2xl"></i>
 			</button>
-			<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-8 max-h-[90vh] overflow-y-auto hide-scrollbar transition-all duration-300">
-<h3 class="text-lg font-bold text-blue-950 dark:text-blue-300">Form Pemesanan</h3>
-					<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn"
-						method="POST">
-						<div>
-							<label for="name" class="text-sm font-medium dark:text-slate-200">Nama</label>
-							<input id="name" name="name" type="text" autocomplete="name" placeholder="Nama lengkap"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-								required />
-						</div>
+			<div
+				class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-8 max-h-[90vh] overflow-y-auto hide-scrollbar transition-all duration-300">
+				<h3 class="text-lg font-bold text-blue-950 dark:text-blue-300">Form</h3>
+				<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn" method="POST">
+					<div>
+						<label for="name" class="text-sm font-medium dark:text-slate-200">Nama</label>
+						<input id="name" name="name" type="text" autocomplete="name" placeholder="Nama lengkap"
+							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+							required />
+					</div>
 
-						<div>
-							<label for="org" class="text-sm font-medium dark:text-slate-200">Instansi</label>
-							<input id="org" name="org" type="text" placeholder="Perusahaan / Kampus / Sekolah"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-								required />
-						</div>
+					<div>
+						<label for="org" class="text-sm font-medium dark:text-slate-200">Instansi</label>
+						<input id="org" name="org" type="text" placeholder="Perusahaan / Kampus / Sekolah"
+							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+							required />
+					</div>
 
-						<div>
-							<label for="replyMethod" class="text-sm font-medium dark:text-slate-200">Metode
-								Balasan</label>
-							<select id="replyMethod" name="reply_method"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-								required>
-								<option value="email" selected>Email</option>
-								<option value="phone">Nomor Telepon</option>
+					<div>
+						<label for="replyMethod" class="text-sm font-medium dark:text-slate-200">Metode
+							Balasan</label>
+						<select id="replyMethod" name="reply_method"
+							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+							required>
+							<option value="email" selected>Email</option>
+							<option value="phone">Nomor Telepon</option>
+						</select>
+					</div>
+
+					<div id="emailGroup">
+						<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Email</label>
+						<input id="replyEmail" name="email" type="email" autocomplete="email" placeholder="Alamat Email"
+							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+							required />
+					</div>
+
+					<div id="phoneGroup" class="hidden">
+						<label for="replyPhone" class="text-sm font-medium dark:text-slate-200">Nomor
+							Telepon</label>
+						<div class="mt-2 flex gap-2">
+							<select id="replyRegion" name="region"
+								class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
+								<option value="+62" selected>🇮🇩 +62</option>
+								<option value="+60">🇲🇾 +60</option>
+								<option value="+65">🇸🇬 +65</option>
 							</select>
+							<input id="replyPhone" name="phone" type="tel" autocomplete="tel" placeholder="81234567890"
+								class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 						</div>
+					</div>
 
-						<div id="emailGroup">
-							<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Email</label>
-							<input id="replyEmail" name="email" type="email" autocomplete="email"
-								placeholder="Alamat Email"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-								required />
-						</div>
+					<div>
+						<label for="message" class="text-sm font-medium dark:text-slate-200">Pesan</label>
+						<textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan proyek Anda..."
+							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+							required></textarea>
+					</div>
 
-						<div id="phoneGroup" class="hidden">
-							<label for="replyPhone" class="text-sm font-medium dark:text-slate-200">Nomor
-								Telepon</label>
-							<div class="mt-2 flex gap-2">
-								<select id="replyRegion" name="region"
-									class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
-									<option value="+62" selected>🇮🇩 +62</option>
-									<option value="+60">🇲🇾 +60</option>
-									<option value="+65">🇸🇬 +65</option>
-								</select>
-								<input id="replyPhone" name="phone" type="tel" autocomplete="tel"
-									placeholder="81234567890"
-									class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
-							</div>
-						</div>
-
-						<div>
-							<label for="message" class="text-sm font-medium dark:text-slate-200">Pesan</label>
-							<textarea id="message" name="message" rows="5"
-								placeholder="Ceritakan kebutuhan proyek Anda..."
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-								required></textarea>
-						</div>
-
-						<button type="submit"
-							class="w-full inline-flex items-center justify-center bg-blue-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
-							Kirim
-						</button>
-					</form>
+					<button type="submit"
+						class="w-full inline-flex items-center justify-center bg-blue-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
+						Kirim
+					</button>
+				</form>
 			</div>
 		</div>
 	</div>
