@@ -630,30 +630,23 @@
 
 
 			// Modal Logic
-			const openModalBtn = document.getElementById('openModalBtn');
-			const closeModalBtn = document.getElementById('closeModalBtn');
-			const orderModal = document.getElementById('orderModal');
-			const modalContent = document.getElementById('modalContent');
+			const modal = document.getElementById('consultationModal');
+			const openBtn = document.getElementById('openModalBtn');
+			const closeBtn = document.getElementById('closeModalBtn');
 
-			const openModal = () => {
-				orderModal.classList.remove('opacity-0', 'pointer-events-none');
-				modalContent.classList.remove('scale-95');
-			};
+			if(openBtn && modal) {
+				openBtn.addEventListener('click', () => {
+					modal.classList.remove('hidden');
+					modal.classList.add('flex');
+					document.body.style.overflow = 'hidden';
+				});
+			}
 
-			const closeModal = () => {
-				orderModal.classList.add('opacity-0', 'pointer-events-none');
-				modalContent.classList.add('scale-95');
-			};
-
-			if (openModalBtn) openModalBtn.addEventListener('click', openModal);
-			if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-
-			// Close on backdrop click
-			if (orderModal) {
-				orderModal.addEventListener('click', (e) => {
-					if (e.target === orderModal) {
-						closeModal();
-					}
+			if(closeBtn && modal) {
+				closeBtn.addEventListener('click', () => {
+					modal.classList.add('hidden');
+					modal.classList.remove('flex');
+					document.body.style.overflow = 'auto';
 				});
 			}
 
