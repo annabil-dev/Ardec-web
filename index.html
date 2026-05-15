@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="ARDEC (Automation & Robotic Development Center) — Pusat inovasi otomasi & robotika untuk trainer edukasi dan solusi embedded systems (B2B & B2E)."
+		/>
+		<title>ARDEC — Automation & Robotic Development Center</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+
+		<style>
+			.hide-scrollbar {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			.hide-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+
+			.bg-watermark {
+				position: relative;
+				isolation: isolate;
+			}
+			.bg-watermark::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-image: url('logo-bg.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+				opacity: 0.22;
+				pointer-events: none;
+				z-index: 0;
+			}
+			.bg-watermark > * {
+				position: relative;
+				z-index: 1;
+			}
+		</style>
+	</head>
+
+	<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 text-slate-800 font-sans antialiased">
+		<!-- Header & Navigation -->
+		<header class="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b-2 border-blue-200 shadow-sm">
+			<nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
+				<div class="h-16 flex items-center justify-between">
+					<a href="#home" class="flex items-center gap-3">
+						<img src="Logo ARDEC/LOGO.jpeg" alt="ARDEC Logo" class="h-10 w-auto" />
+						<span class="text-lg sm:text-xl font-extrabold tracking-wide text-blue-950">ARDEC | Automation & Robotics Development Center</span>
+					</a>
+
+					<!-- Desktop nav -->
+					<div class="hidden md:flex items-center gap-8">
+						<a href="#home" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">Home</a>
+						<a href="#expertise" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">Expertise</a>
+						<a href="#projects" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">Projects</a>
+						<a href="#contact" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">Contact</a>
+					</div>
+
+					<!-- Mobile hamburger -->
+					<button
+						id="mobileMenuButton"
+						type="button"
+						class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-blue-200 hover:border-blue-400 hover:bg-white/60 transition-colors duration-300"
+						aria-label="Open navigation menu"
+						aria-controls="mobileMenu"
+						aria-expanded="false"
+					>
+						<i class="fa-solid fa-bars text-blue-900" aria-hidden="true"></i>
+					</button>
+				</div>
+
+				<!-- Mobile menu -->
+				<div id="mobileMenu" class="md:hidden hidden pb-4" role="navigation" aria-label="Mobile">
+					<div class="flex flex-col gap-2 pt-2">
+						<a href="#home" class="px-3 py-2 rounded-lg hover:bg-white/60 transition-colors duration-300">Home</a>
+						<a href="#expertise" class="px-3 py-2 rounded-lg hover:bg-white/60 transition-colors duration-300">Expertise</a>
+						<a href="#projects" class="px-3 py-2 rounded-lg hover:bg-white/60 transition-colors duration-300">Projects</a>
+						<a href="#contact" class="px-3 py-2 rounded-lg hover:bg-white/60 transition-colors duration-300">Contact</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Hero Section -->
+			<section id="home" class="bg-watermark scroll-mt-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+					<div>
+						<h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-blue-950">
+							Pusat Inovasi Otomasi &amp; Robotika
+						</h1>
+						<p class="mt-5 text-slate-800 leading-relaxed max-w-xl">
+							Merancang dan memproduksi trainer edukasi presisi tinggi serta solusi custom embedded system untuk kebutuhan industri dan akademis.
+						</p>
+
+						<div class="mt-8 flex flex-col sm:flex-row gap-3">
+							<a
+								href="#contact"
+								class="bg-blue-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all"
+							>
+								Konsultasi Proyek
+							</a>
+							<a
+								href="#projects"
+								class="inline-flex items-center justify-center px-8 py-3 rounded-lg font-bold border-2 border-blue-900 text-blue-900 bg-transparent transition-all duration-300 hover:bg-blue-900 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)]"
+							>
+								Lihat Portofolio
+							</a>
+						</div>
+
+					</div>
+
+					<div class="relative">
+						<div class="absolute -inset-2 rounded-2xl bg-blue-200/60 blur-2xl" aria-hidden="true"></div>
+						<img
+							src="https://iticollege.edu/wp-content/uploads/2023/07/Automation-2.jpg"
+							alt="Ilustrasi robotics"
+							class="relative w-full h-auto rounded-2xl border-2 border-blue-200 object-cover"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Core Expertise Section -->
+			<section id="expertise" class="scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
+				<div class="flex items-end justify-between gap-6">
+					<div>
+						<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Spesialisasi Kami</h2>
+					</div>
+				</div>
+
+				<div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+					<article
+						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
+							<i class="fa-solid fa-microchip text-blue-600" aria-hidden="true"></i>
+						</div>
+						<h3 class="mt-5 text-lg font-bold text-blue-950">Educational Trainers</h3>
+						<p class="mt-2 text-slate-800 leading-relaxed">
+							Pembuatan kit praktikum komprehensif untuk PLC, mikrokontroler, dan modul aktuator.
+						</p>
+					</article>
+
+					<article
+						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
+							<i class="fa-solid fa-desktop text-blue-600" aria-hidden="true"></i>
+						</div>
+						<h3 class="mt-5 text-lg font-bold text-blue-950">Custom Interface &amp; Monitoring</h3>
+						<p class="mt-2 text-slate-800 leading-relaxed">
+							Pengembangan GUI khusus untuk pembacaan data serial mikrokontroler dan pemantauan jarak jauh berbasis IoT.
+						</p>
+					</article>
+
+					<article
+						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
+							<i class="fa-solid fa-gears text-blue-600" aria-hidden="true"></i>
+						</div>
+						<h3 class="mt-5 text-lg font-bold text-blue-950">Industrial Automation</h3>
+						<p class="mt-2 text-slate-800 leading-relaxed">
+							Perancangan sistem kontrol presisi dan integrasi perangkat keras untuk efisiensi jalur produksi.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<!-- Portfolio / Projects Section -->
+			<section id="projects" class="scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
+				<div>
+					<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Inovation &amp; Project</h2>
+				</div>
+
+				<div class="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?circuit"
+							alt="Trainer Modul I2C"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Trainer Modul PLC Wecon</div>
+						</figcaption>
+					</figure>
+
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?embedded"
+							alt="Sistem Kontrol Suhu Presisi"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Sistem Kontrol Suhu Presisi</div>
+						</figcaption>
+					</figure>
+
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?robot-arm"
+							alt="Trainer Robotika Dasar"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Trainer Robotika Dasar</div>
+						</figcaption>
+					</figure>
+
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?plc"
+							alt="Panel Trainer PLC"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Panel Trainer PLC</div>
+						</figcaption>
+					</figure>
+
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?iot"
+							alt="Dashboard Monitoring IoT"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Dashboard Monitoring IoT</div>
+						</figcaption>
+					</figure>
+
+					<figure
+						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
+						data-aos="zoom-in-up"
+					>
+						<img
+							src="https://source.unsplash.com/random/600x420/?automation"
+							alt="Rig Uji Aktuator"
+							class="w-full h-72 object-cover"
+							loading="lazy"
+						/>
+						<figcaption class="p-6">
+							<div class="text-lg font-bold text-blue-950">Rig Uji Aktuator</div>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<!-- Contact & Footer -->
+			<section id="contact" class="scroll-mt-22 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+					<div>
+						<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Mari Kolaborasi</h2>
+						<p class="mt-3 text-slate-800 leading-relaxed max-w-xl">
+							Diskusikan kebutuhan trainer, sistem kontrol, atau prototipe embedded untuk program edukasi, riset, maupun kebutuhan produksi.
+						</p>
+
+						<div class="mt-8 space-y-4">
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-900"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-950">Alamat Lab/Workshop</div>
+									<div class="text-slate-800">(Isi alamat ARDEC di sini)</div>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-900"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-950">Email</div>
+									<a href="mailto:info@ardec.example" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">
+										info@ardec.example
+									</a>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-900"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-950">Telepon / WhatsApp</div>
+									<a href="#" class="text-slate-800 hover:text-blue-900 transition-colors duration-300">
+										+62 8xx-xxxx-xxxx
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-grey/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_10px_30px_rgba(37,99,235,0.3)]"
+						data-aos="zoom-in-up"
+					>
+						<h3 class="text-lg font-bold text-blue-950">Form Kontak</h3>
+						<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn" method="POST">
+							<div>
+								<label for="name" class="text-sm font-medium">Nama</label>
+								<input
+									id="name"
+									name="name"
+									type="text"
+									autocomplete="name"
+									placeholder="Nama lengkap"
+									class="mt-2 w-full rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									required
+								/>
+							</div>
+
+							<div>
+								<label for="org" class="text-sm font-medium">Instansi</label>
+								<input
+									id="org"
+									name="org"
+									type="text"
+									placeholder="Perusahaan / Kampus / Sekolah"
+									class="mt-2 w-full rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									required
+								/>
+							</div>
+
+							<div>
+								<label for="replyMethod" class="text-sm font-medium">Metode Balasan</label>
+								<select
+									id="replyMethod"
+									name="reply_method"
+									class="mt-2 w-full rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									required
+								>
+									<option value="email" selected>Email</option>
+									<option value="phone">Nomor Telepon</option>
+								</select>
+							</div>
+
+							<div id="emailGroup">
+								<label for="replyEmail" class="text-sm font-medium">Email</label>
+								<input
+									id="replyEmail"
+									name="email"
+									type="email"
+									autocomplete="email"
+									placeholder="Alamat Email"
+									class="mt-2 w-full rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									required
+								/>
+							</div>
+
+							<div id="phoneGroup" class="hidden">
+								<label for="replyPhone" class="text-sm font-medium">Nomor Telepon</label>
+								<div class="mt-2 flex gap-2">
+									<select
+										id="replyRegion"
+										name="region"
+										class="w-32 rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									>
+										<option value="+62" selected>🇮🇩 +62</option>
+										<option value="+60">🇲🇾 +60</option>
+										<option value="+65">🇸🇬 +65</option>
+									</select>
+									<input
+										id="replyPhone"
+										name="phone"
+										type="tel"
+										autocomplete="tel"
+										placeholder="81234567890"
+										class="flex-1 rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									/>
+								</div>
+							</div>
+
+							<div>
+								<label for="message" class="text-sm font-medium">Pesan</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									placeholder="Ceritakan kebutuhan proyek Anda..."
+									class="mt-2 w-full rounded-lg bg-white/70 border-2 border-blue-200 px-4 py-3 text-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+									required
+								></textarea>
+							</div>
+
+							<button
+								type="submit"
+								class="w-full inline-flex items-center justify-center bg-blue-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all"
+							>
+								Kirim
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-t-2 border-blue-200 bg-white/40 backdrop-blur-md">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-800 text-center">
+				© 2026 ARDEC All rights reserved.
+			</div>
+		</footer>
+
+		<script>
+			(function () {
+				const button = document.getElementById("mobileMenuButton");
+				const menu = document.getElementById("mobileMenu");
+				if (!button || !menu) return;
+
+				const setOpen = (isOpen) => {
+					menu.classList.toggle("hidden", !isOpen);
+					button.setAttribute("aria-expanded", String(isOpen));
+					const icon = button.querySelector("i");
+					if (icon) {
+						icon.classList.toggle("fa-bars", !isOpen);
+						icon.classList.toggle("fa-xmark", isOpen);
+					}
+				};
+
+				button.addEventListener("click", () => {
+					const isExpanded = button.getAttribute("aria-expanded") === "true";
+					setOpen(!isExpanded);
+				});
+
+				menu.querySelectorAll("a").forEach((link) => {
+					link.addEventListener("click", () => setOpen(false));
+				});
+			})();
+		</script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({ once: false, mirror: true, duration: 800, offset: 100 });
+		</script>
+
+		<div
+			id="successToast"
+			class="fixed bottom-5 right-5 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-2xl transform opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-50 flex items-center gap-3"
+			role="status"
+			aria-live="polite"
+		>
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+			</svg>
+			<span class="font-bold">Pesan berhasil dikirim! Tim ARDEC akan segera merespons.</span>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const form = document.getElementById("contactForm");
+				const replyMethod = document.getElementById("replyMethod");
+				const emailGroup = document.getElementById("emailGroup");
+				const phoneGroup = document.getElementById("phoneGroup");
+				const emailInput = document.getElementById("replyEmail");
+				const regionSelect = document.getElementById("replyRegion");
+				const phoneInput = document.getElementById("replyPhone");
+				const toast = document.getElementById("successToast");
+				const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+
+				if (!form || !submitButton) return;
+
+				if (replyMethod && emailGroup && phoneGroup && emailInput && regionSelect && phoneInput) {
+					const setMode = (mode) => {
+						const isEmail = mode === "email";
+
+						emailGroup.classList.toggle("hidden", !isEmail);
+						phoneGroup.classList.toggle("hidden", isEmail);
+
+						emailInput.required = isEmail;
+						phoneInput.required = !isEmail;
+						regionSelect.required = !isEmail;
+					};
+
+					setMode(replyMethod.value);
+					replyMethod.addEventListener("change", function (e) {
+						setMode(e.target.value);
+					});
+
+					form.addEventListener("reset", function () {
+						window.setTimeout(() => setMode(replyMethod.value), 0);
+					});
+				}
+
+				let toastTimer;
+				const showToast = () => {
+					if (!toast) return;
+					if (toastTimer) window.clearTimeout(toastTimer);
+					toast.classList.remove("opacity-0", "translate-y-10", "pointer-events-none");
+					toast.classList.add("pointer-events-auto");
+					toastTimer = window.setTimeout(() => {
+						toast.classList.add("opacity-0", "translate-y-10", "pointer-events-none");
+						toast.classList.remove("pointer-events-auto");
+					}, 4000);
+				};
+
+				form.addEventListener("submit", async function (e) {
+					e.preventDefault();
+
+					const originalText = submitButton.textContent;
+					submitButton.textContent = "Mengirim...";
+					submitButton.disabled = true;
+
+					try {
+						const response = await fetch(form.action, {
+							method: "POST",
+							headers: { Accept: "application/json" },
+							body: new FormData(form),
+						});
+
+						if (response.ok) {
+							form.reset();
+							showToast();
+						}
+					} catch (err) {
+						console.error(err);
+					} finally {
+						submitButton.textContent = originalText || "Kirim";
+						submitButton.disabled = false;
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
