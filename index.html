@@ -150,6 +150,16 @@
 		.animate-data-flow-3 {
 			animation: data-flow 22s linear infinite 10s;
 		}
+
+		/* Infinite Scroll Animation */
+		@keyframes infinite-scroll {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(-50%); }
+		}
+
+		.animate-infinite-scroll {
+			animation: infinite-scroll 40s linear infinite;
+		}
 	</style>
 </head>
 
@@ -357,8 +367,10 @@
 				<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-blue-300">Inovations &amp; Projects</h2>
 			</div>
 
-			<div class="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
-				<figure
+			<div class="mt-10 overflow-hidden relative w-full pb-8">
+				<div class="flex animate-infinite-scroll hover:[animation-play-state:paused] w-max">
+					<div class="flex gap-6 pr-6">
+<figure
 					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="100">
 					<img src="https://source.unsplash.com/random/600x420/?circuit" alt="Trainer Modul I2C"
@@ -415,16 +427,76 @@
 					<img src="https://source.unsplash.com/random/600x420/?automation" alt="Rig Uji Aktuator"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
 					<figcaption class="p-6">
-						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Rig Uji Aktuator</div>
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Rig Uji Aktuator
+					</div>
+					<div class="flex gap-6 pr-6" aria-hidden="true">
+<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="100">
+					<img src="https://source.unsplash.com/random/600x420/?circuit" alt="Trainer Modul I2C"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Trainer Modul PLC Wecon</div>
 					</figcaption>
 				</figure>
-			</div>
+
+				<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="200">
+					<img src="https://source.unsplash.com/random/600x420/?embedded" alt="Sistem Kontrol Suhu Presisi"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Sistem Kontrol Suhu Presisi
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="300">
+					<img src="https://source.unsplash.com/random/600x420/?robot-arm" alt="Trainer Robotika Dasar"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Trainer Robotika Dasar</div>
+					</figcaption>
+				</figure>
+
+				<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="100">
+					<img src="https://source.unsplash.com/random/600x420/?plc" alt="Panel Trainer PLC"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Panel Trainer PLC</div>
+					</figcaption>
+				</figure>
+
+				<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="200">
+					<img src="https://source.unsplash.com/random/600x420/?iot" alt="Dashboard Monitoring IoT"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Dashboard Monitoring IoT</div>
+					</figcaption>
+				</figure>
+
+				<figure
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					data-aos="fade" data-aos-delay="300">
+					<img src="https://source.unsplash.com/random/600x420/?automation" alt="Rig Uji Aktuator"
+						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
+					<figcaption class="p-6">
+						<div class="text-lg font-bold text-blue-950 dark:text-blue-300">Rig Uji Aktuator
+					</div>
+				</div>
+			</div>>
 		</section>
 
 		<!-- Contact & Footer -->
 		<section id="contact" class="scroll-mt-22 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
 			data-aos="fade-up">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
 				<div>
 					<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-blue-300">Mari Kolaborasi</h2>
 					<p class="mt-3 text-slate-900 dark:text-slate-300 leading-relaxed max-w-xl">
@@ -469,7 +541,7 @@
 					</div>
 				</div>
 
-				<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400"
+				<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 md:mt-16 lg:mt-24"
 					data-aos="fade">
 					<h3 class="text-lg font-bold text-blue-950 dark:text-blue-300">Form Pemesanan</h3>
 					<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn"
