@@ -39,6 +39,27 @@
 		</script>
 
 		<style>
+			:root {
+				--fs-base: clamp(15px, 0.35vw + 14px, 18px);
+				--fs-h1: clamp(1.9rem, 3vw + 1rem, 3.5rem);
+				--fs-h2: clamp(1.5rem, 1.6vw + 1.05rem, 2.2rem);
+				--fs-lead: clamp(1rem, 0.6vw + 0.95rem, 1.15rem);
+			}
+			html {
+				font-size: var(--fs-base);
+			}
+			.fluid-h1 {
+				font-size: var(--fs-h1);
+				line-height: 1.05;
+			}
+			.fluid-h2 {
+				font-size: var(--fs-h2);
+				line-height: 1.1;
+			}
+			.fluid-lead {
+				font-size: var(--fs-lead);
+			}
+
 			.hide-scrollbar {
 				-ms-overflow-style: none;
 				scrollbar-width: none;
@@ -73,7 +94,7 @@
 
 	<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 text-slate-800 font-sans antialiased">
 		<!-- Header & Navigation -->
-		<header class="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b-2 border-blue-200 shadow-sm">
+		<header class="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b-2 border-blue-200 shadow-sm" data-aos="fade-down">
 			<nav class="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8" aria-label="Primary">
 				<div class="flex flex-nowrap items-center justify-between">
 					<a href="#home" class="flex-shrink-0">
@@ -81,10 +102,10 @@
 					</a>
 
 					<a href="#home" class="flex-1 min-w-0 px-2">
-						<div class="flex flex-col md:flex-row md:items-center text-center md:text-left">
+						<div class="flex flex-col md:flex-row md:items-center text-center md:text-left leading-tight md:whitespace-nowrap">
 							<span class="font-bold text-sm md:text-base text-blue-950">ARDEC</span>
 							<span class="hidden md:inline mx-2 text-blue-950">|</span>
-							<span class="text-[12px] font-bold leading-none text-gray-600">Automation &amp; Robotics Development Center</span>
+							<span class="text-[9px] md:text-[12px] font-bold text-gray-600">Automation &amp; Robotics Development Center</span>
 						</div>
 					</a>
 
@@ -128,17 +149,17 @@
 			<section id="home" class="bg-watermark scroll-mt-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 					<div>
-						<h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-blue-950">
+						<h1 class="fluid-h1 font-extrabold tracking-tight text-blue-950">
 							Pusat Inovasi Otomasi &amp; Robotika
 						</h1>
-						<p class="mt-5 text-slate-800 leading-relaxed max-w-xl">
+						<p class="fluid-lead mt-5 text-slate-800 leading-relaxed max-w-xl">
 							Merancang dan memproduksi trainer edukasi presisi tinggi serta solusi custom embedded system untuk kebutuhan industri dan akademis.
 						</p>
 
 						<div class="mt-8 flex flex-col sm:flex-row gap-3">
 							<a
 								href="#contact"
-								class="bg-blue-600 text-center text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all"
+								class="bg-blue-600 text-center text-white font-bold rounded-lg px-8 py-3 hover:bg-blue-700 hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] hover:scale-105 transition-all duration-300"
 							>
 								Konsultasi Proyek
 							</a>
@@ -158,6 +179,7 @@
 							src="https://iticollege.edu/wp-content/uploads/2023/07/Automation-2.jpg"
 							alt="Ilustrasi robotics"
 							class="relative w-full h-auto rounded-2xl border-2 border-blue-200 object-cover"
+							data-aos="zoom-in"
 							loading="lazy"
 						/>
 					</div>
@@ -168,7 +190,7 @@
 			<section id="expertise" class="scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
 				<div class="flex items-end justify-between gap-6">
 					<div>
-						<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Spesialisasi Kami</h2>
+						<h2 class="fluid-h2 font-extrabold text-blue-950">Spesialisasi Kami</h2>
 					</div>
 				</div>
 
@@ -176,6 +198,7 @@
 					<article
 						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="100"
 					>
 						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
 							<i class="fa-solid fa-microchip text-blue-600" aria-hidden="true"></i>
@@ -189,6 +212,7 @@
 					<article
 						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="200"
 					>
 						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
 							<i class="fa-solid fa-desktop text-blue-600" aria-hidden="true"></i>
@@ -202,6 +226,7 @@
 					<article
 						class="bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="300"
 					>
 						<div class="h-12 w-12 rounded-xl bg-white/60 border-2 border-blue-200 flex items-center justify-center">
 							<i class="fa-solid fa-gears text-blue-600" aria-hidden="true"></i>
@@ -217,13 +242,14 @@
 			<!-- Portfolio / Projects Section -->
 			<section id="projects" class="scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
 				<div>
-					<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Inovations &amp; Projects</h2>
+					<h2 class="fluid-h2 font-extrabold text-blue-950">Inovations &amp; Projects</h2>
 				</div>
 
 				<div class="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="100"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?circuit"
@@ -239,6 +265,7 @@
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="200"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?embedded"
@@ -254,6 +281,7 @@
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="300"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?robot-arm"
@@ -269,6 +297,7 @@
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="100"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?plc"
@@ -284,6 +313,7 @@
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="200"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?iot"
@@ -299,6 +329,7 @@
 					<figure
 						class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white/60 backdrop-blur-md border-2 border-blue-200 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:z-10"
 						data-aos="zoom-in-up"
+						data-aos-delay="300"
 					>
 						<img
 							src="https://source.unsplash.com/random/600x420/?automation"
@@ -317,7 +348,7 @@
 			<section id="contact" class="scroll-mt-22 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16" data-aos="fade-up">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 					<div>
-						<h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Mari Kolaborasi</h2>
+						<h2 class="fluid-h2 font-extrabold text-blue-950">Mari Kolaborasi</h2>
 						<p class="mt-3 text-slate-800 leading-relaxed max-w-xl">
 							Diskusikan kebutuhan trainer, sistem kontrol, atau prototipe embedded untuk program edukasi, riset, maupun kebutuhan produksi.
 						</p>
@@ -492,7 +523,7 @@
 
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
-			AOS.init({ once: false, mirror: true, duration: 800, offset: 100 });
+			AOS.init({ duration: 800, once: true });
 		</script>
 
 		<div
