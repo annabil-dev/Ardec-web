@@ -566,7 +566,7 @@
 			const toast = document.getElementById("successToast");
 			const submitButton = form ? form.querySelector('button[type="submit"]') : null;
 
-			if (!form || !submitButton) return;
+			
 
 			if (replyMethod && emailGroup && phoneGroup && emailInput && regionSelect && phoneInput) {
 				const setMode = (mode) => {
@@ -602,31 +602,33 @@
 				}, 4000);
 			};
 
-			form.addEventListener("submit", async function (e) {
-				e.preventDefault();
+			if (form) {
+				form.addEventListener("submit", async function (e) {
+					e.preventDefault();
 
-				const originalText = submitButton.textContent;
-				submitButton.textContent = "Mengirim...";
-				submitButton.disabled = true;
+					const originalText = submitButton.textContent;
+					submitButton.textContent = "Mengirim...";
+					submitButton.disabled = true;
 
-				try {
-					const response = await fetch(form.action, {
-						method: "POST",
-						headers: { Accept: "application/json" },
-						body: new FormData(form),
-					});
+					try {
+						const response = await fetch(form.action, {
+							method: "POST",
+							headers: { Accept: "application/json" },
+							body: new FormData(form),
+						});
 
-					if (response.ok) {
-						form.reset();
-						showToast();
+						if (response.ok) {
+							form.reset();
+							showToast();
+						}
+					} catch (err) {
+						console.error(err);
+					} finally {
+						submitButton.textContent = originalText || "Kirim";
+						submitButton.disabled = false;
 					}
-				} catch (err) {
-					console.error(err);
-				} finally {
-					submitButton.textContent = originalText || "Kirim";
-					submitButton.disabled = false;
-				}
-			});
+				});
+			}
 
 
 			// Modal Logic
