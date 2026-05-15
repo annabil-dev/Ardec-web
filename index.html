@@ -118,23 +118,24 @@
 				linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
 		}
 
-		/* Gear Animations */
-		@keyframes spin-slow {
-			from {
-				transform: rotate(0deg);
-			}
-
-			to {
-				transform: rotate(360deg);
-			}
+		/* Flowing Data Lines Animation */
+		@keyframes data-flow {
+			0% { transform: translateX(-100%); opacity: 0; }
+			10% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { transform: translateX(100%); opacity: 0; }
 		}
 
-		.animate-spin-slow {
-			animation: spin-slow 30s linear infinite;
+		.animate-data-flow-1 {
+			animation: data-flow 15s linear infinite;
 		}
 
-		.animate-spin-slow-reverse {
-			animation: spin-slow 40s linear infinite reverse;
+		.animate-data-flow-2 {
+			animation: data-flow 18s linear infinite 5s;
+		}
+
+		.animate-data-flow-3 {
+			animation: data-flow 22s linear infinite 10s;
 		}
 	</style>
 </head>
@@ -144,22 +145,14 @@
 
 	<!-- Background Grid Layer -->
 	<div
-		class="fixed inset-0 z-[-2] pointer-events-none bg-slate-50 dark:bg-slate-950 bg-grid-pattern transition-colors duration-300">
+		class="fixed inset-0 z-[-2] pointer-events-none bg-slate-50 dark:bg-black bg-grid-pattern transition-colors duration-300">
 	</div>
 
-	<!-- Decorative Floating Gears -->
-	<div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-		<!-- Top Right Gear (Hero) -->
-		<i
-			class="fa-solid fa-gear absolute -top-24 -right-24 text-[400px] text-blue-600 opacity-10 dark:text-blue-400 dark:opacity-10 animate-spin-slow"></i>
-
-		<!-- Center Left Gear (Portfolio) -->
-		<i
-			class="fa-solid fa-gear absolute top-[60%] -translate-y-1/2 -left-32 text-[500px] text-blue-600 opacity-10 dark:text-blue-400 dark:opacity-10 animate-spin-slow-reverse"></i>
-
-		<!-- Bottom Right Gear -->
-		<i
-			class="fa-solid fa-gear absolute -bottom-32 -right-10 text-[350px] text-blue-600 opacity-10 dark:text-blue-400 dark:opacity-10 animate-spin-slow"></i>
+	<!-- Decorative Flowing Data Lines -->
+	<div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden flex flex-col justify-between py-32 opacity-30 dark:opacity-20">
+		<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-data-flow-1"></div>
+		<div class="w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-data-flow-2 mt-48"></div>
+		<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-data-flow-3 mt-64"></div>
 	</div>
 
 	<!-- Header & Navigation -->
@@ -256,9 +249,9 @@
 				</div>
 
 				<div class="relative flex justify-center items-center" data-aos="zoom-in" data-aos-duration="1000">
-					<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_xvrofzfk.json"
-						background="transparent" speed="1" style="width: 100%; max-width: 500px; height: auto;" loop
-						autoplay class="floating-animation"></lottie-player>
+					<div class="w-full max-w-[500px] aspect-square md:aspect-[4/3] rounded-2xl p-2 bg-white/20 dark:bg-slate-800/30 backdrop-blur-md border border-white/40 dark:border-slate-700/50 shadow-2xl overflow-hidden floating-animation">
+						<img src="https://source.unsplash.com/random/800x600/?robotics,technology,assembly" alt="ARDEC Hero Photo" class="w-full h-full object-cover rounded-xl" />
+					</div>
 					<style>
 						@keyframes float {
 							0% {
@@ -293,10 +286,10 @@
 
 			<div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
 				<article
-					class="bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="100">
 					<div
-						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border-2 border-blue-200 dark:border-slate-600 flex items-center justify-center">
+						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
 						<i class="fa-solid fa-microchip text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-blue-300">Educational Trainers</h3>
@@ -306,10 +299,10 @@
 				</article>
 
 				<article
-					class="bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="200">
 					<div
-						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border-2 border-blue-200 dark:border-slate-600 flex items-center justify-center">
+						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
 						<i class="fa-solid fa-desktop text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-blue-300">Custom Interface &amp;
@@ -321,10 +314,10 @@
 				</article>
 
 				<article
-					class="bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="300">
 					<div
-						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border-2 border-blue-200 dark:border-slate-600 flex items-center justify-center">
+						class="h-12 w-12 rounded-xl bg-white/60 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
 						<i class="fa-solid fa-gears text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-blue-300">Industrial Automation</h3>
@@ -344,7 +337,7 @@
 
 			<div class="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="100">
 					<img src="https://source.unsplash.com/random/600x420/?circuit" alt="Trainer Modul I2C"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -354,7 +347,7 @@
 				</figure>
 
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="200">
 					<img src="https://source.unsplash.com/random/600x420/?embedded" alt="Sistem Kontrol Suhu Presisi"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -365,7 +358,7 @@
 				</figure>
 
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="300">
 					<img src="https://source.unsplash.com/random/600x420/?robot-arm" alt="Trainer Robotika Dasar"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -375,7 +368,7 @@
 				</figure>
 
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="100">
 					<img src="https://source.unsplash.com/random/600x420/?plc" alt="Panel Trainer PLC"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -385,7 +378,7 @@
 				</figure>
 
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="200">
 					<img src="https://source.unsplash.com/random/600x420/?iot" alt="Dashboard Monitoring IoT"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -395,7 +388,7 @@
 				</figure>
 
 				<figure
-					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
+					class="min-w-[85vw] md:min-w-[600px] snap-center shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 transform cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400 hover:z-10"
 					data-aos="fade" data-aos-delay="300">
 					<img src="https://source.unsplash.com/random/600x420/?automation" alt="Rig Uji Aktuator"
 						class="w-full h-72 object-cover dark:opacity-90" loading="lazy" />
@@ -454,7 +447,7 @@
 					</div>
 				</div>
 
-				<div class="bg-white dark:bg-slate-900 border-2 border-blue-200 dark:border-slate-700 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400"
+				<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)] hover:border-blue-300 dark:hover:shadow-[0_10px_25px_rgba(59,130,246,0.6)] dark:hover:border-blue-400"
 					data-aos="fade">
 					<h3 class="text-lg font-bold text-blue-950 dark:text-blue-300">Form Kontak</h3>
 					<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn"
@@ -462,14 +455,14 @@
 						<div>
 							<label for="name" class="text-sm font-medium dark:text-slate-200">Nama</label>
 							<input id="name" name="name" type="text" autocomplete="name" placeholder="Nama lengkap"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 								required />
 						</div>
 
 						<div>
 							<label for="org" class="text-sm font-medium dark:text-slate-200">Instansi</label>
 							<input id="org" name="org" type="text" placeholder="Perusahaan / Kampus / Sekolah"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 								required />
 						</div>
 
@@ -477,7 +470,7 @@
 							<label for="replyMethod" class="text-sm font-medium dark:text-slate-200">Metode
 								Balasan</label>
 							<select id="replyMethod" name="reply_method"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 								required>
 								<option value="email" selected>Email</option>
 								<option value="phone">Nomor Telepon</option>
@@ -488,7 +481,7 @@
 							<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Email</label>
 							<input id="replyEmail" name="email" type="email" autocomplete="email"
 								placeholder="Alamat Email"
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 								required />
 						</div>
 
@@ -497,14 +490,14 @@
 								Telepon</label>
 							<div class="mt-2 flex gap-2">
 								<select id="replyRegion" name="region"
-									class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
+									class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
 									<option value="+62" selected>🇮🇩 +62</option>
 									<option value="+60">🇲🇾 +60</option>
 									<option value="+65">🇸🇬 +65</option>
 								</select>
 								<input id="replyPhone" name="phone" type="tel" autocomplete="tel"
 									placeholder="81234567890"
-									class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
+									class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 							</div>
 						</div>
 
@@ -512,7 +505,7 @@
 							<label for="message" class="text-sm font-medium dark:text-slate-200">Pesan</label>
 							<textarea id="message" name="message" rows="5"
 								placeholder="Ceritakan kebutuhan proyek Anda..."
-								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border-2 border-blue-200 dark:border-slate-600 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
+								class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 								required></textarea>
 						</div>
 
