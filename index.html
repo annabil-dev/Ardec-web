@@ -546,7 +546,7 @@
 	</script>
 
 	<div id="successToast"
-		class="fixed bottom-5 right-5 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-2xl transform opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-50 flex items-center gap-3"
+		class="fixed bottom-5 right-5 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-2xl transform opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-[99999] flex items-center gap-3"
 		role="status" aria-live="polite">
 		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -746,14 +746,7 @@
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 					</div>
 
-					<div>
-						<label for="projectTitle" class="text-sm font-medium dark:text-slate-200">Judul Proyek <span
-								class="text-red-500">*</span></label>
-						<input id="projectTitle" name="project_title" type="text"
-							placeholder="Contoh: Pembuatan Trainer IoT"
-							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
-							required />
-					</div>
+
 
 					<div>
 						<label for="projectDesc" class="text-sm font-medium dark:text-slate-200">Deskripsi Proyek <span
