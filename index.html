@@ -196,6 +196,13 @@
 			transform: translateY(-50%) scale(1.1);
 		}
 
+		/* Hide arrows on mobile, show on md+ */
+		@media (max-width: 767px) {
+			.splide__arrow {
+				display: none !important;
+			}
+		}
+
 		@media (min-width: 768px) {
 			.splide__arrow--prev {
 				left: -1.5rem;
@@ -297,9 +304,9 @@
 							class="text-slate-900 dark:text-slate-200 hover:text-blue-900 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
 					</div>
 
-					<!-- Theme Toggle -->
+					<!-- Theme Toggle (always visible) -->
 					<button id="themeToggle"
-						class="p-2 rounded-lg text-slate-900 dark:text-yellow-400 hover:bg-white/60 dark:hover:bg-slate-800 transition-colors duration-300 border border-transparent hover:border-blue-200 dark:hover:border-slate-700"
+						class="flex items-center justify-center p-2 rounded-lg text-slate-900 dark:text-yellow-400 hover:bg-white/60 dark:hover:bg-slate-800 transition-colors duration-300 border border-transparent hover:border-blue-200 dark:hover:border-slate-700"
 						aria-label="Toggle Dark Mode">
 						<i class="fa-solid fa-moon dark:hidden text-lg"></i>
 						<i class="fa-solid fa-sun hidden dark:inline text-lg"></i>
@@ -451,9 +458,9 @@
 							<figure
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="/Lates Activity ARDEC/Launching ARDEC/DSC07511.JPG" alt="Trainer Modul I2C"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
-								<figcaption class="p-6 flex-1 flex flex-col justify-end">
+								<figcaption class="p-4 md:p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Trainer Modul PLC
 										Wecon</div>
 								</figcaption>
@@ -465,7 +472,7 @@
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?embedded"
 									alt="Sistem Kontrol Suhu Presisi"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
 								<figcaption class="p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Sistem Kontrol Suhu
@@ -479,7 +486,7 @@
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?robot-arm"
 									alt="Trainer Robotika Dasar"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
 								<figcaption class="p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Trainer Robotika
@@ -492,7 +499,7 @@
 							<figure
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?plc" alt="Panel Trainer PLC"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
 								<figcaption class="p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Panel Trainer PLC
@@ -506,7 +513,7 @@
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?iot"
 									alt="Dashboard Monitoring IoT"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
 								<figcaption class="p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Dashboard
@@ -520,7 +527,7 @@
 								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?automation"
 									alt="Rig Uji Aktuator"
-									class="w-full h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									class="w-full h-[200px] md:h-[300px] object-contain bg-slate-50 dark:bg-slate-800 rounded-t-xl dark:opacity-90"
 									loading="lazy" />
 								<figcaption class="p-6 flex-1 flex flex-col justify-end">
 									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Rig Uji Aktuator
@@ -551,47 +558,47 @@
 					<ul class="splide__list">
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07667.JPG" alt="Launching TEFA ARDEC 3"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07853.JPG" alt="Launching TEFA ARDEC 4"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07938.JPG" alt="Launching TEFA ARDEC 5"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07944.JPG" alt="Launching TEFA ARDEC 6"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC08117.JPG" alt="Launching TEFA ARDEC 7"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC08135.JPG" alt="Launching TEFA ARDEC 8"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07598.JPG" alt="Launching TEFA ARDEC 8"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07614.JPG" alt="Launching TEFA ARDEC 8"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 						<li class="splide__slide px-4 lg:px-0 flex justify-center">
 							<img src="Lates Activity ARDEC/Launching ARDEC/DSC07637.JPG" alt="Launching TEFA ARDEC 8"
-								class="w-full max-w-4xl h-[600px] md:h-[500px] object-cover rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+								class="w-full max-w-4xl h-[300px] sm:h-[400px] md:h-[500px] object-contain bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
 								loading="lazy" />
 						</li>
 					</ul>
