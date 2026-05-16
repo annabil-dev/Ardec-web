@@ -566,7 +566,7 @@
 			const toast = document.getElementById("successToast");
 			const submitButton = form ? form.querySelector('button[type="submit"]') : null;
 
-			
+
 
 			if (replyMethod && emailGroup && phoneGroup && emailInput && regionSelect && phoneInput) {
 				const setMode = (mode) => {
@@ -636,7 +636,7 @@
 			const openBtn = document.getElementById('openModalBtn');
 			const closeBtn = document.getElementById('closeModalBtn');
 
-			if(openBtn && modal) {
+			if (openBtn && modal) {
 				openBtn.addEventListener('click', () => {
 					modal.classList.remove('hidden');
 					modal.classList.add('flex');
@@ -644,7 +644,7 @@
 				});
 			}
 
-			if(closeBtn && modal) {
+			if (closeBtn && modal) {
 				closeBtn.addEventListener('click', () => {
 					modal.classList.add('hidden');
 					modal.classList.remove('flex');
@@ -675,13 +675,13 @@
 			const waGroup = document.getElementById('whatsappInputGroup');
 			const emailInput = document.getElementById('replyEmail');
 			const waInput = document.getElementById('replyWa');
-			
+
 			if (method === 'email') {
 				emailGroup.classList.remove('hidden');
 				emailGroup.classList.add('block');
 				waGroup.classList.remove('block');
 				waGroup.classList.add('hidden');
-				
+
 				emailInput.required = true;
 				waInput.required = false;
 			} else {
@@ -689,7 +689,7 @@
 				emailGroup.classList.add('hidden');
 				waGroup.classList.remove('hidden');
 				waGroup.classList.add('block');
-				
+
 				emailInput.required = false;
 				waInput.required = true;
 			}
@@ -728,44 +728,54 @@
 			<div
 				class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl p-8 max-h-[90vh] overflow-y-auto hide-scrollbar transition-all duration-300">
 				<h3 class="text-xl font-bold text-blue-950 dark:text-blue-300">Form Konsultasi Proyek</h3>
-				
+
 				<form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/xnjwkknn" method="POST">
 					<div>
-						<label for="fullName" class="text-sm font-medium dark:text-slate-200">Nama Lengkap <span class="text-red-500">*</span></label>
+						<label for="fullName" class="text-sm font-medium dark:text-slate-200">Nama Lengkap <span
+								class="text-red-500">*</span></label>
 						<input id="fullName" name="name" type="text" autocomplete="name" placeholder="Nama lengkap Anda"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required />
 					</div>
 
 					<div>
-						<label for="afiliasi" class="text-sm font-medium dark:text-slate-200">Instansi (Perusahaan/Universitas/Sekolah)</label>
-						<input id="afiliasi" name="afiliasi" type="text" placeholder="Contoh: Universitas Diponegoro / PT Maju Mundur"
+						<label for="afiliasi" class="text-sm font-medium dark:text-slate-200">Instansi
+							(Perusahaan/Universitas/Sekolah)</label>
+						<input id="afiliasi" name="afiliasi" type="text"
+							placeholder="Contoh: Universitas Diponegoro / PT Maju Mundur"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 					</div>
 
 					<div>
-						<label for="projectTitle" class="text-sm font-medium dark:text-slate-200">Judul Proyek <span class="text-red-500">*</span></label>
-						<input id="projectTitle" name="project_title" type="text" placeholder="Contoh: Pembuatan Trainer IoT"
+						<label for="projectTitle" class="text-sm font-medium dark:text-slate-200">Judul Proyek <span
+								class="text-red-500">*</span></label>
+						<input id="projectTitle" name="project_title" type="text"
+							placeholder="Contoh: Pembuatan Trainer IoT"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required />
 					</div>
 
 					<div>
-						<label for="projectDesc" class="text-sm font-medium dark:text-slate-200">Deskripsi Proyek <span class="text-red-500">*</span></label>
-						<textarea id="projectDesc" name="message" rows="4" placeholder="Ceritakan detail kebutuhan proyek Anda..."
+						<label for="projectDesc" class="text-sm font-medium dark:text-slate-200">Deskripsi Proyek <span
+								class="text-red-500">*</span></label>
+						<textarea id="projectDesc" name="message" rows="4"
+							placeholder="Ceritakan detail kebutuhan proyek Anda..."
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required></textarea>
 					</div>
 
 					<div>
-						<label class="text-sm font-medium dark:text-slate-200 block mb-2">Metode Balasan <span class="text-red-500">*</span></label>
+						<label class="text-sm font-medium dark:text-slate-200 block mb-2">Metode Balasan <span
+								class="text-red-500">*</span></label>
 						<div class="flex items-center gap-6">
 							<label class="flex items-center gap-2 cursor-pointer text-slate-800 dark:text-slate-200">
-								<input type="radio" name="reply_method" value="email" class="w-4 h-4 text-blue-600" checked onchange="toggleReplyMethod()">
+								<input type="radio" name="reply_method" value="email" class="w-4 h-4 text-blue-600"
+									checked onchange="toggleReplyMethod()">
 								Email
 							</label>
 							<label class="flex items-center gap-2 cursor-pointer text-slate-800 dark:text-slate-200">
-								<input type="radio" name="reply_method" value="whatsapp" class="w-4 h-4 text-blue-600" onchange="toggleReplyMethod()">
+								<input type="radio" name="reply_method" value="whatsapp" class="w-4 h-4 text-blue-600"
+									onchange="toggleReplyMethod()">
 								WhatsApp
 							</label>
 						</div>
@@ -773,14 +783,17 @@
 
 					<!-- Dynamic Input Fields based on Reply Method -->
 					<div id="emailInputGroup" class="block">
-						<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Alamat Email <span class="text-red-500">*</span></label>
-						<input id="replyEmail" name="email" type="email" autocomplete="email" placeholder="contoh@email.com"
+						<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Alamat Email <span
+								class="text-red-500">*</span></label>
+						<input id="replyEmail" name="email" type="email" autocomplete="email"
+							placeholder="contoh@email.com"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required />
 					</div>
 
 					<div id="whatsappInputGroup" class="hidden">
-						<label for="replyWa" class="text-sm font-medium dark:text-slate-200">Nomor WhatsApp <span class="text-red-500">*</span></label>
+						<label for="replyWa" class="text-sm font-medium dark:text-slate-200">Nomor WhatsApp <span
+								class="text-red-500">*</span></label>
 						<div class="mt-2 flex gap-2">
 							<select id="waRegion" name="wa_region"
 								class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
@@ -789,20 +802,23 @@
 								<option value="+65">🇸🇬 +65</option>
 								<option value="+60">🇲🇾 +60</option>
 							</select>
-							<input id="replyWa" name="whatsapp_number" type="tel" autocomplete="tel" placeholder="81234567890"
+							<input id="replyWa" name="whatsapp_number" type="tel" autocomplete="tel"
+								placeholder="81234567890"
 								class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 						</div>
 					</div>
 
 					<button type="submit"
 						class="w-full inline-flex items-center justify-center bg-blue-600 text-white font-bold rounded-lg px-8 py-3 mt-4 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
-						Kirim Permintaan
+						<i class="fa-solid fa-gmail text-xl"></i>
+						Kirim Permintaan Melalui Email
 					</button>
 				</form>
 
 				<div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800 text-center">
 					<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Atau butuh respon instan?</p>
-					<a href="https://wa.me/6281291493497?text=Halo%20ARDEC,%20saya%20tertarik%20untuk%20konsultasi%20proyek.%20Bisa%20bantu%20jelaskan%20prosedurnya?" target="_blank"
+					<a href="https://wa.me/6281291493497?text=Halo%20ARDEC,%20saya%20tertarik%20untuk%20konsultasi%20proyek.%20Bisa%20bantu%20jelaskan%20prosedurnya?"
+						target="_blank"
 						class="w-full bg-[#25D366] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-3 hover:bg-[#128C7E] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all">
 						<i class="fa-brands fa-whatsapp text-xl"></i>
 						Konsultasi Cepat via WhatsApp
