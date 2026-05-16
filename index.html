@@ -444,7 +444,7 @@
 				<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-white">Innovations & Projects</h2>
 			</div>
 
-			<div class="mt-12 splide" aria-label="Innovations and Projects">
+			<div class="mt-12 splide" id="projects-splide" aria-label="Innovations and Projects">
 				<div class="splide__track py-8 pb-16">
 					<ul class="splide__list">
 						<li class="splide__slide px-4 lg:px-0">
@@ -533,35 +533,81 @@
 				<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-white">Latest Activity</h2>
 			</div>
 
-			<div class="relative w-full flex overflow-x-hidden group">
-				<div class="flex gap-6 animate-infinite-scroll w-max group-hover:[animation-play-state:paused] pr-6">
-					<!-- Set 1 -->
-					<img src="https://source.unsplash.com/random/600x400/?workshop" alt="Activity 1"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?training" alt="Activity 2"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?presentation" alt="Activity 3"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?meeting" alt="Activity 4"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?robotics" alt="Activity 5"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?engineering" alt="Activity 6"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					
-					<!-- Set 2 -->
-					<img src="https://source.unsplash.com/random/600x400/?workshop" alt="Activity 1"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?training" alt="Activity 2"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?presentation" alt="Activity 3"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?meeting" alt="Activity 4"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?robotics" alt="Activity 5"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
-					<img src="https://source.unsplash.com/random/600x400/?engineering" alt="Activity 6"
-						class="h-[200px] md:h-[250px] lg:h-[300px] w-auto rounded-2xl object-cover shadow-md border border-slate-200 dark:border-slate-800 transition-transform duration-300 hover:scale-105 cursor-pointer" loading="lazy" />
+			<div class="mt-12 splide" id="activity-splide" aria-label="Latest Activity">
+				<div class="splide__track py-8 pb-16">
+					<ul class="splide__list">
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?workshop" alt="Workshop Session"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Workshop Session</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Sesi pelatihan praktis bersama mitra industri.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?training" alt="Training Mahasiswa"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Training Mahasiswa</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Pelatihan dasar robotika dan otomasi industri.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?presentation" alt="Presentasi Proyek"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Presentasi Proyek</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Pemaparan prototipe sistem embedded terbaru.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?meeting" alt="Meeting Koordinasi"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Meeting Koordinasi</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Diskusi dan perancangan kurikulum bersama tim ahli.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?robotics" alt="Uji Coba Robotika"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Uji Coba Robotika</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Pengujian sistem kontrol pada lengan robot.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col min-h-[480px] justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?engineering" alt="Engineering Practice"
+									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
+								<figcaption class="px-8 pt-8 pb-12 flex-1 flex flex-col justify-end">
+									<div class="text-2xl font-bold text-blue-950 dark:text-blue-300">Engineering Practice</div>
+									<p class="mt-2 text-slate-600 dark:text-slate-300">Praktek perakitan panel kontrol industri.</p>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -838,9 +884,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			var el = document.querySelector('.splide');
-			if (el) {
-				new Splide(el, {
+			var projectsEl = document.querySelector('#projects-splide');
+			if (projectsEl) {
+				new Splide(projectsEl, {
 					type: 'loop',
 					perPage: 1,
 					focus: 'center',
@@ -853,6 +899,25 @@
 					interval: 8000,
 					pauseOnHover: false,
 					pauseOnFocus: false,
+					gap: '2rem'
+				}).mount();
+			}
+
+			var activityEl = document.querySelector('#activity-splide');
+			if (activityEl) {
+				new Splide(activityEl, {
+					type: 'loop',
+					perPage: 1,
+					focus: 'center',
+					arrows: false,
+					pagination: true,
+					drag: true,
+					wheel: false,
+					autoWidth: false,
+					autoplay: true,
+					interval: 3000,
+					pauseOnHover: true,
+					pauseOnFocus: true,
 					gap: '2rem'
 				}).mount();
 			}
