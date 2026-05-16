@@ -166,6 +166,61 @@
 		.animate-infinite-scroll {
 			animation: infinite-scroll 40s linear infinite;
 		}
+
+		/* Custom Splide Styles */
+		.splide__arrow {
+			background: white;
+			opacity: 1;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+			transition: all 0.3s ease;
+			width: 3rem;
+			height: 3rem;
+		}
+		.splide__arrow svg {
+			fill: #2563eb;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+		.dark .splide__arrow {
+			background: #1e293b;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+		}
+		.dark .splide__arrow svg {
+			fill: #60a5fa;
+		}
+		.splide__arrow:hover {
+			transform: translateY(-50%) scale(1.1);
+		}
+		@media (min-width: 768px) {
+			.splide__arrow--prev { left: -1.5rem; }
+			.splide__arrow--next { right: -1.5rem; }
+		}
+		@media (min-width: 1024px) {
+			.splide__arrow--prev { left: -3.5rem; }
+			.splide__arrow--next { right: -3.5rem; }
+		}
+		
+		.splide__pagination {
+			bottom: 0rem;
+		}
+		.splide__pagination__page {
+			background: #cbd5e1;
+			width: 10px;
+			height: 10px;
+			margin: 0 6px;
+			transition: all 0.3s ease;
+		}
+		.dark .splide__pagination__page {
+			background: #475569;
+		}
+		.splide__pagination__page.is-active {
+			background: #2563eb;
+			width: 2.5rem;
+			border-radius: 1rem;
+		}
+		.dark .splide__pagination__page.is-active {
+			background: #3b82f6;
+		}
 	</style>
 </head>
 
@@ -370,11 +425,11 @@
 			</div>
 
 			<div class="mt-10 splide" aria-label="Innovations and Projects">
-				<div class="splide__track py-8">
+				<div class="splide__track py-8 pb-16">
 					<ul class="splide__list">
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?circuit" alt="Trainer Modul I2C"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
 								<figcaption class="p-8 flex-1 flex flex-col justify-center">
@@ -384,9 +439,9 @@
 							</figure>
 						</li>
 
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?embedded"
 									alt="Sistem Kontrol Suhu Presisi"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
@@ -397,9 +452,9 @@
 							</figure>
 						</li>
 
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?robot-arm"
 									alt="Trainer Robotika Dasar"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
@@ -410,9 +465,9 @@
 							</figure>
 						</li>
 
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?plc" alt="Panel Trainer PLC"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
 								<figcaption class="p-8 flex-1 flex flex-col justify-center">
@@ -422,9 +477,9 @@
 							</figure>
 						</li>
 
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?iot"
 									alt="Dashboard Monitoring IoT"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
@@ -435,9 +490,9 @@
 							</figure>
 						</li>
 
-						<li class="splide__slide w-[85vw] md:w-[60vw] lg:w-[700px]">
+						<li class="splide__slide px-4 lg:px-0">
 							<figure
-								class="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								class="w-full max-w-4xl mx-auto flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
 								<img src="https://source.unsplash.com/random/1200x800/?automation"
 									alt="Rig Uji Aktuator"
 									class="w-full h-[350px] object-cover rounded-t-xl dark:opacity-90" loading="lazy" />
@@ -728,21 +783,20 @@
 			if (el) {
 				new Splide(el, {
 					type: 'loop',
-					arrows: false,
-					pagination: false,
+					perPage: 1,
+					focus: 'center',
+					arrows: true,
+					pagination: true,
 					drag: 'free',
 					wheel: true,
 					releaseWheel: true,
 					wheelSleep: 50,
-					autoWidth: true,
+					autoWidth: false,
 					autoplay: true,
 					interval: 8000,
 					pauseOnHover: false,
 					pauseOnFocus: false,
-					gap: '2rem',
-					breakpoints: {
-						768: { autoWidth: false, perPage: 1 }
-					}
+					gap: '2rem'
 				}).mount();
 			}
 		});
