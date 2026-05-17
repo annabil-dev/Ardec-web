@@ -978,11 +978,11 @@
 
 				<!-- Tabs UI -->
 				<div class="flex flex-row gap-3 mt-6 mb-6">
-					<button type="button"
+					<button type="button" id="tab-project"
 						class="flex-1 py-2.5 px-4 rounded-lg bg-blue-600 text-white font-semibold text-sm transition-colors shadow-md">
 						Konsultasi Project
 					</button>
-					<button type="button"
+					<button type="button" id="tab-training"
 						class="flex-1 py-2.5 px-4 rounded-lg bg-transparent text-slate-500 border border-slate-300 dark:border-slate-700 dark:text-slate-400 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
 						Training / Edukasi
 					</button>
@@ -1008,9 +1008,9 @@
 
 
 					<div>
-						<label for="projectDesc" class="text-sm font-medium dark:text-slate-200">Deskripsi Proyek <span
+						<label for="input-deskripsi" id="label-deskripsi" class="text-sm font-medium dark:text-slate-200">Deskripsi Proyek <span
 								class="text-red-500">*</span></label>
-						<textarea id="projectDesc" name="message" rows="4"
+						<textarea id="input-deskripsi" name="message" rows="4"
 							placeholder="Ceritakan detail kebutuhan proyek Anda..."
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required></textarea>
@@ -1060,8 +1060,8 @@
 						</div>
 					</div>
 
-					<button type="submit"
-						class="w-full inline-flex items-center justify-center bg-blue-600 text-white font-bold rounded-lg px-8 py-3 mt-4 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
+					<button type="submit" id="btn-submit-form"
+						class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold rounded-lg px-8 py-3 mt-4 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
 						<i class="fa-brands fa-gmail text-xl"></i>
 						Kirim Permintaan Melalui Email
 					</button>
@@ -1080,6 +1080,44 @@
 		</div>
 	</div>
 
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const tabProject = document.getElementById('tab-project');
+		const tabTraining = document.getElementById('tab-training');
+		const labelDeskripsi = document.getElementById('label-deskripsi');
+		const inputDeskripsi = document.getElementById('input-deskripsi');
+		const btnSubmit = document.getElementById('btn-submit-form');
+
+		if (!tabProject || !tabTraining || !labelDeskripsi || !inputDeskripsi || !btnSubmit) {
+			console.error("EROR: Salah satu elemen Form Konsultasi tidak ditemukan! Periksa kembali penempatan ID.");
+			return;
+		}
+
+		function switchTab(activeTab, inactiveTab, isProject) {
+			// Logika Animasi Button Warna (Active vs Inactive)
+			activeTab.classList.remove('bg-transparent', 'text-slate-500', 'border-slate-300');
+			activeTab.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+
+			inactiveTab.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+			const inactiveClass = ['bg-transparent', 'text-slate-500', 'border-slate-300'];
+			inactiveTab.classList.add(...inactiveClass);
+
+			// Ubah Konten Secara Dinamis
+			if (isProject) {
+				labelDeskripsi.innerHTML = 'Deskripsi Proyek <span class="text-red-500">*</span>';
+				inputDeskripsi.placeholder = 'Ceritakan detail kebutuhan proyek Anda...';
+				btnSubmit.innerHTML = '<i class="fa-brands fa-gmail text-xl"></i> Kirim Permintaan Melalui Email';
+			} else {
+				labelDeskripsi.innerHTML = 'Kebutuhan Training / Edukasi <span class="text-red-500">*</span>';
+				inputDeskripsi.placeholder = 'Ceritakan materi atau topik pelatihan yang Anda butuhkan secara detail...';
+				btnSubmit.innerHTML = '<i class="fa-brands fa-gmail text-xl"></i> Kirim Permintaan Training Melalui Email';
+			}
+		}
+
+		tabProject.addEventListener('click', () => switchTab(tabProject, tabTraining, true));
+		tabTraining.addEventListener('click', () => switchTab(tabTraining, tabProject, false));
+	});
+	</script>
 </body>
 
 </html>
