@@ -972,11 +972,11 @@
 				<!-- Tabs UI -->
 				<div class="flex flex-row gap-3 mt-6 mb-6">
 					<button type="button" id="tab-project"
-						class="flex-1 py-2.5 px-4 rounded-lg bg-blue-600 text-white font-semibold text-sm transition-colors shadow-md">
+						class="flex-1 py-2.5 px-4 rounded-lg font-semibold text-sm shadow-md transition-all duration-300 transform hover:-translate-y-1 bg-blue-600 text-white border border-blue-600 hover:bg-blue-700">
 						Konsultasi Project
 					</button>
 					<button type="button" id="tab-training"
-						class="flex-1 py-2.5 px-4 rounded-lg bg-transparent text-slate-500 border border-slate-300 dark:border-slate-700 dark:text-slate-400 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+						class="flex-1 py-2.5 px-4 rounded-lg font-semibold text-sm shadow-md transition-all duration-300 transform hover:-translate-y-1 bg-transparent text-slate-600 border border-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:border-slate-700 dark:text-slate-400">
 						Training / Edukasi
 					</button>
 				</div>
@@ -1087,12 +1087,15 @@
 		}
 
 		function switchTab(activeTab, inactiveTab, isProject) {
-			// Logika Animasi Button Warna (Active vs Inactive)
-			activeTab.classList.remove('bg-transparent', 'text-slate-500', 'border-slate-300');
-			activeTab.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+			// Tambahkan hover state spesifik agar tidak bentrok
+			const activeClass = ['bg-blue-600', 'text-white', 'border-blue-600', 'hover:bg-blue-700'];
+			const inactiveClass = ['bg-transparent', 'text-slate-600', 'border-slate-300', 'hover:bg-slate-100', 'hover:text-slate-900'];
 
-			inactiveTab.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
-			const inactiveClass = ['bg-transparent', 'text-slate-500', 'border-slate-300'];
+			// Logika Animasi Button Warna (Active vs Inactive)
+			activeTab.classList.remove(...inactiveClass);
+			activeTab.classList.add(...activeClass);
+
+			inactiveTab.classList.remove(...activeClass);
 			inactiveTab.classList.add(...inactiveClass);
 
 			// Ubah Konten Secara Dinamis
