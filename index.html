@@ -477,10 +477,12 @@
 								<img src="/Projects/DSC07510.JPG" alt="Trainer Modul I2C"
 									class="w-full h-[200px] md:h-[550px] object-cover bg-slate-50 dark:bg-slate-900 rounded-xl dark:opacity-90"
 									loading="lazy" />
-								<figcaption class="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gray-900/60 backdrop-blur-sm rounded-b-xl">
+								<figcaption
+									class="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gray-900/60 backdrop-blur-sm rounded-b-xl">
 									<div class="text-xl md:text-2xl font-bold text-white uppercase">
 										Trainerkit PLC Wecon</div>
-									<p class="mt-1 text-sm text-gray-200">Advanced education kit featuring the Wecon PLC for practical learning.</p>
+									<p class="mt-1 text-sm text-gray-200">Advanced education kit featuring the Wecon PLC
+										for practical learning.</p>
 								</figcaption>
 							</figure>
 						</li>
@@ -508,10 +510,12 @@
 									alt="Training PLC Basic"
 									class="w-full h-[200px] md:h-[550px] object-cover bg-slate-50 dark:bg-slate-900 rounded-xl dark:opacity-90"
 									loading="lazy" />
-								<figcaption class="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gray-900/60 backdrop-blur-sm rounded-b-xl">
+								<figcaption
+									class="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gray-900/60 backdrop-blur-sm rounded-b-xl">
 									<div class="text-xl md:text-2xl font-bold text-white uppercase">
 										Training Company</div>
-									<p class="mt-1 text-sm text-gray-200">Professional industrial training on-site for engineers and technicians.</p>
+									<p class="mt-1 text-sm text-gray-200">Professional industrial training on-site for
+										engineers and technicians.</p>
 								</figcaption>
 							</figure>
 						</li>
@@ -1117,27 +1121,6 @@
 					// Saat di atas: Hilangkan bayangan, tapi tetap pertahankan warna putih transparan
 					navbar.classList.remove('shadow-md');
 				}
-			});
-
-			// Menyembunyikan hash (#) dari URL saat navigasi & Smooth scroll
-			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-				anchor.addEventListener('click', function (e) {
-					const targetId = this.getAttribute('href');
-					if (targetId === '#') return; // Abaikan link kosong
-
-					e.preventDefault();
-					const targetElement = document.querySelector(targetId);
-					
-					if (targetElement) {
-						// Jalankan smooth scroll manual
-						targetElement.scrollIntoView({
-							behavior: 'smooth'
-						});
-						
-						// Bersihkan URL tanpa tanda #
-						history.pushState(null, null, window.location.pathname);
-					}
-				});
 			});
 		});
 	</script>
