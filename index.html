@@ -1118,6 +1118,27 @@
 					navbar.classList.remove('shadow-md');
 				}
 			});
+
+			// Menyembunyikan hash (#) dari URL saat navigasi & Smooth scroll
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return; // Abaikan link kosong
+
+					e.preventDefault();
+					const targetElement = document.querySelector(targetId);
+					
+					if (targetElement) {
+						// Jalankan smooth scroll manual
+						targetElement.scrollIntoView({
+							behavior: 'smooth'
+						});
+						
+						// Bersihkan URL tanpa tanda #
+						history.pushState(null, null, window.location.pathname);
+					}
+				});
+			});
 		});
 	</script>
 </body>
