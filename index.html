@@ -1122,6 +1122,28 @@
 					navbar.classList.remove('shadow-md');
 				}
 			});
+
+			// Mengubah hash (#) menjadi (/) pada URL saat navigasi & Smooth scroll
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return; // Abaikan link kosong
+
+					e.preventDefault();
+					const targetElement = document.querySelector(targetId);
+					
+					if (targetElement) {
+						// Halaman tetap smooth scroll di tempat
+						targetElement.scrollIntoView({
+							behavior: 'smooth'
+						});
+						
+						// Ubah "#expertise" menjadi "/expertise" di URL Bar
+						const cleanPath = targetId.replace('#', '/');
+						history.pushState(null, null, cleanPath);
+					}
+				});
+			});
 		});
 	</script>
 </body>
