@@ -480,6 +480,45 @@
 			</div>
 		</section>
 
+		<!-- Training & Pelatihan Section -->
+		<section id="training"
+			class="scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 w-full max-w-[100vw]"
+			data-aos="fade-up">
+			<div class="w-full flex flex-col items-center text-center mb-6">
+				<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-white">Training & Pelatihan</h2>
+			</div>
+
+			<div class="mt-6 splide px-4 md:px-16 lg:px-24 max-w-7xl mx-auto" id="training-splide"
+				aria-label="Training and Pelatihan">
+				<div class="splide__track py-8 pb-16 overflow-hidden rounded-2xl">
+					<ul class="splide__list">
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?workshop" alt="Pelatihan PLC Dasar"
+									class="w-full h-[200px] md:h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									loading="lazy" />
+								<figcaption class="p-4 md:p-6 flex-1 flex flex-col justify-end">
+									<div class="text-xl md:text-2xl font-bold text-blue-950 dark:text-blue-300">Pelatihan PLC Dasar</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li class="splide__slide px-4 lg:px-0">
+							<figure
+								class="w-full max-w-4xl mx-auto flex flex-col h-auto justify-between bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)] rounded-xl transition-all duration-300 transform cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 dark:hover:border-blue-400">
+								<img src="https://source.unsplash.com/random/1200x800/?iot,training" alt="Workshop IoT"
+									class="w-full h-[200px] md:h-[550px] object-contain bg-slate-50 dark:bg-slate-900 rounded-t-xl dark:opacity-90"
+									loading="lazy" />
+								<figcaption class="p-4 md:p-6 flex-1 flex flex-col justify-end">
+									<div class="text-xl md:text-2xl font-bold text-blue-950 dark:text-blue-300">Workshop IoT Integrasi</div>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
 		<!-- Latest Activity Section -->
 		<section id="activity" class="py-12 sm:py-16 w-full max-w-[100vw] relative" data-aos="fade-up">
 			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 w-full flex flex-col items-center text-center">
@@ -822,6 +861,26 @@
 			var projectsEl = document.querySelector('#projects-splide');
 			if (projectsEl) {
 				new Splide(projectsEl, {
+					type: 'loop',
+					perPage: 1,
+					focus: 'center',
+					arrows: true,
+					pagination: true,
+					drag: true,
+					wheel: false,
+					autoWidth: false,
+					autoplay: true,
+					interval: 8000,
+					speed: 2000,
+					pauseOnHover: false,
+					pauseOnFocus: false,
+					gap: '2rem'
+				}).mount();
+			}
+
+			var trainingEl = document.querySelector('#training-splide');
+			if (trainingEl) {
+				new Splide(trainingEl, {
 					type: 'loop',
 					perPage: 1,
 					focus: 'center',
