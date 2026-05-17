@@ -968,9 +968,9 @@
 
 				<form id="contactForm" class="space-y-4" action="https://formspree.io/f/xnjwkknn" method="POST">
 					<div>
-						<label for="fullName" class="text-sm font-medium dark:text-slate-200">Nama Lengkap <span
+						<label for="input-nama" class="text-sm font-medium dark:text-slate-200">Nama Lengkap <span
 								class="text-red-500">*</span></label>
-						<input id="fullName" name="name" type="text" autocomplete="name" placeholder="Nama lengkap Anda"
+						<input id="input-nama" name="name" type="text" autocomplete="name" placeholder="Nama lengkap Anda"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required />
 					</div>
@@ -985,9 +985,9 @@
 					</div>
 
 					<div>
-						<label for="afiliasi" class="text-sm font-medium dark:text-slate-200">Instansi
+						<label for="input-instansi" class="text-sm font-medium dark:text-slate-200">Instansi
 							(Perusahaan/Universitas/Sekolah)</label>
-						<input id="afiliasi" name="afiliasi" type="text"
+						<input id="input-instansi" name="afiliasi" type="text"
 							placeholder="Contoh: Universitas Diponegoro / PT Maju Mundur"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
 					</div>
@@ -1015,12 +1015,11 @@
 
 				<div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800 text-center">
 					<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Atau butuh respon instan?</p>
-					<a href="https://wa.me/6281291493497?text=Halo%20ARDEC,%20saya%20tertarik%20untuk%20konsultasi%20proyek.%20Bisa%20bantu%20jelaskan%20prosedurnya?"
-						target="_blank"
+					<button type="button" id="btn-wa-submit"
 						class="w-full bg-[#25D366] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-3 hover:bg-[#128C7E] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all">
 						<i class="fa-brands fa-whatsapp text-xl"></i>
 						Konsultasi Cepat via WhatsApp
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -1065,6 +1064,38 @@
 
 			tabProject.addEventListener('click', () => switchTab(tabProject, tabTraining, true));
 			tabTraining.addEventListener('click', () => switchTab(tabTraining, tabProject, false));
+
+			const btnWaSubmit = document.getElementById('btn-wa-submit');
+			const inputNama = document.getElementById('input-nama');
+			const inputInstansi = document.getElementById('input-instansi');
+
+			if (btnWaSubmit) {
+				btnWaSubmit.addEventListener('click', () => {
+					// Ambil nilai dari input, gunakan string kosong jika belum diisi
+					const nama = inputNama ? inputNama.value.trim() : '';
+					const instansi = inputInstansi ? inputInstansi.value.trim() : '';
+					const noWaArdec = '6281291493497'; // Nomor tujuan WA
+
+					let pesanTemplate = '';
+
+					if (nama !== '' || instansi !== '') {
+						// Skenario 1: Ada input dari user
+						const teksNama = nama !== '' ? nama : '..........';
+						const teksInstansi = instansi !== '' ? instansi : '..........';
+						pesanTemplate = `Halo Tim ARDEC,\n\nPerkenalkan nama saya ${teksNama} dari instansi ${teksInstansi}.\n\nSaya tertarik untuk berkonsultasi lebih lanjut mengenai kebutuhan otomasi/edukasi. Bisa dibantu?`;
+					} else {
+						// Skenario 2: Kosong sama sekali
+						pesanTemplate = `Halo Tim ARDEC,\n\nPerkenalkan nama saya .......... dari instansi ........... \n\nSaya tertarik untuk berkonsultasi lebih lanjut mengenai kebutuhan otomasi/edukasi. Bisa dibantu?`;
+					}
+
+					// Encode pesan agar aman untuk URL WhatsApp
+					const pesanEncoded = encodeURIComponent(pesanTemplate);
+					const waUrl = `https://wa.me/${noWaArdec}?text=${pesanEncoded}`;
+					
+					// Buka di tab baru
+					window.open(waUrl, '_blank');
+				});
+			}
 		});
 
 		document.addEventListener('DOMContentLoaded', () => {
