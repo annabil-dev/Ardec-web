@@ -356,7 +356,7 @@
 					</h1>
 					<p class="fluid-lead mt-5 text-slate-900 dark:text-slate-300 leading-relaxed max-w-xl">
 						Merancang dan memproduksi trainer edukasi presisi tinggi serta solusi custom embedded system
-						untuk kebutuhan industri dan akademis.
+						untuk kebutuhan industri 4.0 dan akademis.
 					</p>
 
 					<div class="mt-8 flex flex-col sm:flex-row gap-3">
@@ -418,7 +418,8 @@
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-white">Educational Trainer Kits</h3>
 					<p class="mt-2 text-slate-900 dark:text-slate-300 leading-relaxed">
-						Merancang dan memproduksi kit praktikum presisi untuk PLC, mikrokontroler, dan sistem kontrol industri guna memenuhi standar kebutuhan akademis maupun komersial.
+						Merancang dan memproduksi kit praktikum presisi untuk PLC, mikrokontroler, dan sistem kontrol
+						industri guna memenuhi standar kebutuhan akademis maupun komersial.
 					</p>
 				</article>
 
@@ -431,7 +432,8 @@
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-white">Automation &amp; Custom HMI</h3>
 					<p class="mt-2 text-slate-900 dark:text-slate-300 leading-relaxed">
-						Perancangan sistem otomasi industri terintegrasi dan pengembangan antarmuka (HMI/GUI) interaktif untuk pembacaan data serial dan kendali perangkat keras secara aktual.
+						Perancangan sistem otomasi industri terintegrasi dan pengembangan antarmuka (HMI/GUI) interaktif
+						untuk pembacaan data serial dan kendali perangkat keras secara aktual.
 					</p>
 				</article>
 
@@ -444,7 +446,8 @@
 					</div>
 					<h3 class="mt-5 text-lg font-bold text-blue-950 dark:text-white">Professional Training</h3>
 					<p class="mt-2 text-slate-900 dark:text-slate-300 leading-relaxed">
-						Penyelenggaraan pelatihan dan workshop intensif bagi klien, instansi, dan akademisi terkait implementasi otomasi, PLC, serta ekosistem embedded system.
+						Penyelenggaraan pelatihan dan workshop intensif bagi klien, instansi, dan akademisi terkait
+						implementasi otomasi, PLC, serta ekosistem embedded system.
 					</p>
 				</article>
 			</div>
@@ -993,47 +996,12 @@
 					</div>
 
 					<div>
-						<label class="text-sm font-medium dark:text-slate-200 block mb-2">Metode Balasan <span
-								class="text-red-500">*</span></label>
-						<div class="flex items-center gap-6">
-							<label class="flex items-center gap-2 cursor-pointer text-slate-800 dark:text-slate-200">
-								<input type="radio" name="reply_method" value="email" class="w-4 h-4 text-blue-600"
-									checked onchange="toggleReplyMethod()">
-								Email
-							</label>
-							<label class="flex items-center gap-2 cursor-pointer text-slate-800 dark:text-slate-200">
-								<input type="radio" name="reply_method" value="whatsapp" class="w-4 h-4 text-blue-600"
-									onchange="toggleReplyMethod()">
-								WhatsApp
-							</label>
-						</div>
-					</div>
-
-					<!-- Dynamic Input Fields based on Reply Method -->
-					<div id="emailInputGroup" class="block">
 						<label for="replyEmail" class="text-sm font-medium dark:text-slate-200">Alamat Email <span
 								class="text-red-500">*</span></label>
 						<input id="replyEmail" name="email" type="email" autocomplete="email"
 							placeholder="contoh@email.com"
 							class="mt-2 w-full rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors"
 							required />
-					</div>
-
-					<div id="whatsappInputGroup" class="hidden">
-						<label for="replyWa" class="text-sm font-medium dark:text-slate-200">Nomor WhatsApp <span
-								class="text-red-500">*</span></label>
-						<div class="mt-2 flex gap-2">
-							<select id="waRegion" name="wa_region"
-								class="w-32 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors">
-								<option value="+62">🇮🇩 +62</option>
-								<option value="+1">🇺🇸 +1</option>
-								<option value="+65">🇸🇬 +65</option>
-								<option value="+60">🇲🇾 +60</option>
-							</select>
-							<input id="replyWa" name="whatsapp_number" type="tel" autocomplete="tel"
-								placeholder="81234567890"
-								class="flex-1 rounded-lg bg-white/70 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 transition-colors" />
-						</div>
 					</div>
 
 					<button type="submit" id="btn-submit-form"
@@ -1099,7 +1067,7 @@
 
 		document.addEventListener('DOMContentLoaded', () => {
 			const navbar = document.getElementById('main-navbar');
-			
+
 			window.addEventListener('scroll', () => {
 				if (window.scrollY > 50) {
 					// Saat di-scroll: Tambahkan bayangan agar terlihat melayang
