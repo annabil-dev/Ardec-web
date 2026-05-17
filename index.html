@@ -242,6 +242,25 @@
 		.dark .splide__pagination__page.is-active {
 			background: #3b82f6;
 		}
+
+		/* =========================================
+		   NUKLIR DOUBLE SCROLLBAR FIX
+		   ========================================= */
+		html, body {
+			/* Paksa browser menggunakan scroll native dan mematikan kuncian tinggi */
+			height: auto !important;
+			min-height: 100vh !important;
+			overflow-y: auto !important;
+			overflow-x: hidden !important; /* Mencegah geser horizontal */
+		}
+
+		/* Membunuh semua scrollbar internal pada wrapper utama (Next.js/React/Vite) */
+		#__next, #root, main, .main-container {
+			height: auto !important;
+			max-height: none !important;
+			overflow-y: visible !important; 
+		}
+		/* ========================================= */
 	</style>
 </head>
 
