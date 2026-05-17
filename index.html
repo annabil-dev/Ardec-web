@@ -243,29 +243,12 @@
 			background: #3b82f6;
 		}
 
-		/* =========================================
-		   NUKLIR DOUBLE SCROLLBAR FIX
-		   ========================================= */
-		html, body {
-			/* Paksa browser menggunakan scroll native dan mematikan kuncian tinggi */
-			height: auto !important;
-			min-height: 100vh !important;
-			overflow-y: auto !important;
-			overflow-x: hidden !important; /* Mencegah geser horizontal */
-		}
 
-		/* Membunuh semua scrollbar internal pada wrapper utama (Next.js/React/Vite) */
-		#__next, #root, main, .main-container {
-			height: auto !important;
-			max-height: none !important;
-			overflow-y: visible !important; 
-		}
-		/* ========================================= */
 	</style>
 </head>
 
 <body
-	class="text-slate-900 dark:text-slate-200 font-sans antialiased overflow-x-clip transition-colors duration-300 relative">
+	class="text-slate-900 dark:text-slate-200 font-sans antialiased transition-colors duration-300 relative">
 
 	<!-- Background Grid Layer -->
 	<div
