@@ -1040,7 +1040,7 @@
 					<button type="submit" id="btn-submit-form"
 						class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold rounded-lg px-8 py-3 mt-4 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] transition-all">
 						<i class="fa-brands fa-gmail text-xl"></i>
-						Kirim Permintaan Project Melalui Email
+						Kirim Permintaan Project via Email
 					</button>
 				</form>
 
@@ -1086,11 +1086,11 @@
 				if (isProject) {
 					labelDeskripsi.innerHTML = 'Deskripsi Proyek <span class="text-red-500">*</span>';
 					inputDeskripsi.placeholder = 'Ceritakan detail kebutuhan proyek Anda...';
-					btnSubmit.innerHTML = '<i class="fa-brands fa-gmail text-xl"></i> Kirim Permintaan Melalui Email';
+					btnSubmit.innerText = 'Kirim Permintaan Project via Email';
 				} else {
 					labelDeskripsi.innerHTML = 'Kebutuhan Training / Edukasi <span class="text-red-500">*</span>';
 					inputDeskripsi.placeholder = 'Ceritakan materi atau topik pelatihan yang Anda butuhkan secara detail...';
-					btnSubmit.innerHTML = '<i class="fa-brands fa-gmail text-xl"></i> Kirim Permintaan Training Melalui Email';
+					btnSubmit.innerText = 'Kirim Permintaan Training via Email';
 				}
 			}
 
