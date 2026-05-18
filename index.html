@@ -123,6 +123,17 @@
 			animation: draw-line 3s linear infinite;
 		}
 
+		@keyframes radar-pulse {
+			0% {
+				transform: scale(1);
+				opacity: 1;
+			}
+			100% {
+				transform: scale(2.2);
+				opacity: 0;
+			}
+		}
+
 		/* Blueprint Grid */
 		.bg-grid-pattern {
 			background-size: 40px 40px;
@@ -790,7 +801,7 @@
 					</div>
 				</div>
 				<!-- Copyright -->
-				<div class="bg-slate-900 dark:bg-slate-100 text-center py-6 mt-4">
+				<div class="bg-slate-900 dark:bg-slate-100 text-center py-3 mt-4">
 					<p class="text-base text-slate-400 dark:text-slate-600">Copyright &copy; 2026 ARDEC All rights reserved.</p>
 				</div>
 			</section>
@@ -1269,12 +1280,11 @@
 			center: [-2.5, 118.0],
 			zoom: 5,
 			zoomControl: false,
-			scrollWheelZoom: false
+			scrollWheelZoom: false,
+			attributionControl: false
 		});
 
-		L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-			attribution: '&copy; OpenStreetMap contributors'
-		}).addTo(map);
+		L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {}).addTo(map);
 
 		const markers = [
 			{ name: "Semarang HUB (ARDEC)", coords: [-6.9932, 110.4203], color: "#2563eb", isHub: true },
@@ -1285,17 +1295,61 @@
 		];
 
 		markers.forEach(m => {
-			const marker = L.circleMarker(m.coords, {
-				radius: m.isHub ? 10 : 7,
-				fillColor: m.color,
-				color: '#ffffff',
-				weight: 2,
-				opacity: 1,
-				fillOpacity: 0.8
-			}).addTo(map);
-
+			const pulseHtml = `
+				<div style="position:relative;display:flex;align-items:center;justify-content:center;">
+					<div style="position:absolute;width:${m.isHub ? 32 : 24}px;height:${m.isHub ? 32 : 24}px;border-radius:50%;background:${m.color}33;border:1.5px solid ${m.color};animation:radar-pulse 2s ease-out infinite;"></div>
+					<div style="width:${m.isHub ? 12 : 8}px;height:${m.isHub ? 12 : 8}px;border-radius:50%;background:${m.color};box-shadow:0 0 8px ${m.color};"></div>
+				</div>
+			`;
+			const icon = L.divIcon({
+				html: pulseHtml,
+				className: '',
+				iconSize: [m.isHub ? 32 : 24, m.isHub ? 32 : 24],
+				iconAnchor: [m.isHub ? 16 : 12, m.isHub ? 16 : 12]
+			});
+			const marker = L.marker(m.coords, { icon }).addTo(map);
 			marker.bindPopup(`<b>${m.name}</b>`);
 		});
+
+		// SVG Overlay for animated connection lines
+		const hubCoords = markers[0].coords;
+		const svgOverlay = L.svg();
+		svgOverlay.addTo(map);
+		const svgEl = document.querySelector('#map .leaflet-overlay-pane svg');
+		if (svgEl) {
+			svgEl.setAttribute('style', 'pointer-events:none;overflow:visible;');
+			markers.slice(1).forEach(m => {
+				const from = map.latLngToLayerPoint(L.latLng(hubCoords[0], hubCoords[1]));
+				const to = map.latLngToLayerPoint(L.latLng(m.coords[0], m.coords[1]));
+				const midX = (from.x + to.x) / 2;
+				const midY = Math.min(from.y, to.y) - 30;
+				const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+				path.setAttribute('d', `M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`);
+				path.setAttribute('fill', 'none');
+				path.setAttribute('stroke', '#3b82f6');
+				path.setAttribute('stroke-width', '2');
+				path.setAttribute('stroke-dasharray', '8 4');
+				path.setAttribute('opacity', '0.7');
+				path.classList.add('animate-draw-line');
+				svgEl.appendChild(path);
+			});
+
+			// Redraw lines on map move/zoom
+			map.on('moveend zoomend', () => {
+				const paths = svgEl.querySelectorAll('path');
+				const fromPt = map.latLngToLayerPoint(L.latLng(hubCoords[0], hubCoords[1]));
+				let i = 0;
+				markers.slice(1).forEach(m => {
+					const toPt = map.latLngToLayerPoint(L.latLng(m.coords[0], m.coords[1]));
+					const mx = (fromPt.x + toPt.x) / 2;
+					const my = Math.min(fromPt.y, toPt.y) - 30;
+					if (paths[i]) {
+						paths[i].setAttribute('d', `M ${fromPt.x} ${fromPt.y} Q ${mx} ${my} ${toPt.x} ${toPt.y}`);
+					}
+					i++;
+				});
+			});
+		}
 	</script>
 </body>
 
