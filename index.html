@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth scroll-pt-24">
+<html lang="id" class="scroll-smooth scroll-pt-32">
 
 <head>
 	<meta charset="UTF-8" />
@@ -104,6 +104,20 @@
 		.bg-watermark>* {
 			position: relative;
 			z-index: 1;
+		}
+
+		/* Draw Line Animation */
+		@keyframes draw-line {
+			0% {
+				stroke-dashoffset: 100;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		.animate-draw-line {
+			animation: draw-line 3s linear infinite;
 		}
 
 		/* Blueprint Grid */
@@ -618,17 +632,18 @@
 						<!-- Peta Indonesia -->
 						<img src="/Peta/doodle-freehand-drawing-of-indonesia-map-free-png.webp" alt="Peta Jangkauan & Mitra Kolaborasi ARDEC" class="w-full h-auto drop-shadow-sm"/>
 
-						<!-- HUB SEMARANG -->
-						<div class="absolute group cursor-pointer z-10 top-[66%] left-[44%]">
+						<!-- GEDUNG TEFA ARDEC (Semarang) -->
+						<div class="absolute top-[66%] left-[44%] group cursor-pointer z-10">
 							<div class="w-4 h-4 bg-blue-600 rounded-full border-2 border-white animate-pulse shadow-md"></div>
-							<div class="hidden group-hover:block absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-20">
+							<div class="hidden group-hover:block absolute bottom-6 left-1/2 -translate-x-1/2 w-56 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-20">
 								<div class="flex items-center gap-2">
 									<div class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center flex-shrink-0">
 										<i class="fa-solid fa-building text-white text-xs"></i>
 									</div>
 									<div>
 										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">HUB ARDEC</p>
-										<p class="text-[10px] text-slate-500 dark:text-slate-400">Semarang, Jawa Tengah</p>
+										<p class="mt-1 text-sm text-slate-700 dark:text-slate-300">Gedung TEFA (Teaching Factory) ARDEC</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400">Semarang, Jawa Tengah</p>
 									</div>
 								</div>
 							</div>
@@ -697,6 +712,11 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- SVG Connection Lines Overlay -->
+						<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1000 600" preserveAspectRatio="none">
+							<path d="M440 396 Q380 300 300 360" class="stroke-blue-400 stroke-2 fill-none animate-draw-line" stroke-dasharray="8 4"/>
+						</svg>
 					</div>
 				</div>
 
@@ -857,8 +877,8 @@
 					</div>
 				</div>
 				<!-- Copyright -->
-				<div class="bg-slate-900 dark:bg-slate-100 text-center py-6">
-					<p class="text-sm text-slate-400 dark:text-slate-600">Copyright &copy; 2026 ARDEC All rights reserved.</p>
+				<div class="bg-slate-900 dark:bg-slate-100 text-center py-6 mt-4">
+					<p class="text-base text-slate-400 dark:text-slate-600">Copyright &copy; 2026 ARDEC All rights reserved.</p>
 				</div>
 			</section>
 	</main>
