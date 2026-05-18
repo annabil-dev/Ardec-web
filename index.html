@@ -628,45 +628,47 @@
 
 				<!-- Map Box Container -->
 				<div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-4 sm:p-8 max-w-5xl mx-auto border border-slate-200 dark:border-slate-700">
-					<div class="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-4">
-						<svg viewBox="0 0 1000 440" class="w-full h-auto select-none">
-							<image href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Blank_map_of_Indonesia.svg/1024px-Blank_map_of_Indonesia.svg.png" x="0" y="0" width="1000" height="440" />
+					<div class="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-4 flex justify-center items-center">
+						<div class="relative w-full max-w-[800px] aspect-[1000/440] bg-contain bg-no-repeat bg-center"
+							style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Blank_map_of_Indonesia.svg/1024px-Blank_map_of_Indonesia.svg.png');">
 
-							<path d="M 390 325 Q 345 290 305 315" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-							<path d="M 390 325 Q 260 200 132 170" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-							<path d="M 390 325 Q 420 325 450 332" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-							<path d="M 390 325 Q 480 280 565 272" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+							<svg viewBox="0 0 1000 440" class="absolute inset-0 w-full h-full select-none z-10">
+								<path d="M 390 325 Q 345 290 305 315" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+								<path d="M 390 325 Q 260 200 132 170" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+								<path d="M 390 325 Q 420 325 450 332" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+								<path d="M 390 325 Q 480 280 565 272" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
 
-							<g class="group cursor-pointer">
-								<circle cx="390" cy="325" r="14" class="fill-blue-500/20 stroke-blue-500 stroke-[1]"/>
-								<circle cx="390" cy="325" r="5" class="fill-blue-600 animate-pulse"/>
-								<text x="390" y="352" text-anchor="middle" class="text-[11px] font-extrabold fill-blue-600 dark:fill-blue-400" style="font-family:Inter,sans-serif">Semarang HUB</text>
-							</g>
+								<g class="group cursor-pointer">
+									<circle cx="390" cy="325" r="14" class="fill-blue-500/20 stroke-blue-500 stroke-[1]"/>
+									<circle cx="390" cy="325" r="5" class="fill-blue-600 animate-pulse"/>
+									<text x="390" y="355" text-anchor="middle" class="text-[12px] font-extrabold fill-blue-600 dark:fill-blue-400" style="font-family:Inter,sans-serif">Semarang HUB</text>
+								</g>
 
-							<g class="group cursor-pointer">
-								<circle cx="305" cy="315" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-								<circle cx="305" cy="315" r="4" class="fill-orange-600 animate-pulse"/>
-								<text x="305" y="340" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Jakarta</text>
-							</g>
+								<g class="group cursor-pointer">
+									<circle cx="305" cy="315" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+									<circle cx="305" cy="315" r="4" class="fill-orange-600 animate-pulse"/>
+									<text x="305" y="342" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Jakarta</text>
+								</g>
 
-							<g class="group cursor-pointer">
-								<circle cx="450" cy="332" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-								<circle cx="450" cy="332" r="4" class="fill-orange-600 animate-pulse"/>
-								<text x="450" y="357" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Surabaya</text>
-							</g>
+								<g class="group cursor-pointer">
+									<circle cx="450" cy="332" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+									<circle cx="450" cy="332" r="4" class="fill-orange-600 animate-pulse"/>
+									<text x="450" y="360" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Surabaya</text>
+								</g>
 
-							<g class="group cursor-pointer">
-								<circle cx="132" cy="170" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-								<circle cx="132" cy="170" r="4" class="fill-orange-600 animate-pulse"/>
-								<text x="132" y="195" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Medan</text>
-							</g>
+								<g class="group cursor-pointer">
+									<circle cx="132" cy="170" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+									<circle cx="132" cy="170" r="4" class="fill-orange-600 animate-pulse"/>
+									<text x="132" y="198" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Medan</text>
+								</g>
 
-							<g class="group cursor-pointer">
-								<circle cx="565" cy="272" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-								<circle cx="565" cy="272" r="4" class="fill-orange-600 animate-pulse"/>
-								<text x="565" y="297" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Makassar</text>
-							</g>
-						</svg>
+								<g class="group cursor-pointer">
+									<circle cx="565" cy="272" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+									<circle cx="565" cy="272" r="4" class="fill-orange-600 animate-pulse"/>
+									<text x="565" y="300" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Makassar</text>
+								</g>
+							</svg>
+						</div>
 					</div>
 				</div>
 
