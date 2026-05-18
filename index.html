@@ -628,118 +628,50 @@
 
 				<!-- Map Box Container -->
 				<div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-4 sm:p-8 max-w-5xl mx-auto border border-slate-200 dark:border-slate-700">
-					<div class="relative overflow-hidden rounded-2xl">
-						<!-- Peta Indonesia -->
-						<img src="/Peta/doodle-freehand-drawing-of-indonesia-map-free-png.webp" alt="Peta Jangkauan & Mitra Kolaborasi ARDEC" class="w-full h-auto drop-shadow-sm"/>
+					<div class="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-4">
+						<svg viewBox="0 0 1000 440" class="w-full h-auto select-none">
+							<image href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Blank_map_of_Indonesia.svg/1024px-Blank_map_of_Indonesia.svg.png" x="0" y="0" width="1000" height="440" />
 
-						<!-- GEDUNG TEFA ARDEC (Semarang) -->
-						<div class="absolute top-[59%] left-[36%] group cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
-							<div class="flex items-center justify-center w-8 h-8 rounded-full border border-blue-500 hover:border-blue-400 bg-blue-500/20">
-								<div class="w-2.5 h-2.5 bg-blue-600 rounded-full animate-pulse shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
-							</div>
-							<span class="absolute top-full mt-1 text-[10px] font-extrabold text-blue-700 dark:text-blue-400">Semarang HUB</span>
-							<div class="hidden group-hover:block absolute bottom-12 left-1/2 -translate-x-1/2 w-56 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-30">
-								<div class="flex items-center gap-2">
-									<div class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center flex-shrink-0">
-										<i class="fa-solid fa-building text-white text-xs"></i>
-									</div>
-									<div>
-										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">HUB ARDEC</p>
-										<p class="mt-1 text-sm text-slate-700 dark:text-slate-300">Gedung TEFA (Teaching Factory) ARDEC</p>
-										<p class="text-xs text-slate-500 dark:text-slate-400">Semarang, Jawa Tengah</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<path d="M 390 325 Q 345 290 305 315" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 260 200 132 170" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 420 325 450 332" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 480 280 565 272" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
 
-						<!-- JAKARTA -->
-						<div class="absolute top-[58%] left-[29%] group cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
-							<div class="flex items-center justify-center w-7 h-7 rounded-full border border-emerald-500 hover:border-emerald-400 bg-emerald-500/20">
-								<div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-							</div>
-							<span class="absolute top-full mt-1 text-[10px] font-bold text-slate-700 dark:text-slate-300">Jakarta</span>
-							<div class="hidden group-hover:block absolute bottom-11 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-30">
-								<div class="flex items-center gap-2">
-									<div class="w-8 h-8 rounded bg-emerald-500 flex items-center justify-center flex-shrink-0">
-										<i class="fa-solid fa-microchip text-white text-xs"></i>
-									</div>
-									<div>
-										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">PT. Inovasi Otomasi Jkt</p>
-										<p class="text-[10px] text-slate-500 dark:text-slate-400">Jakarta, DKI Jakarta</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<g class="group cursor-pointer">
+								<circle cx="390" cy="325" r="14" class="fill-blue-500/20 stroke-blue-500 stroke-[1]"/>
+								<circle cx="390" cy="325" r="5" class="fill-blue-600 animate-pulse"/>
+								<text x="390" y="352" text-anchor="middle" class="text-[11px] font-extrabold fill-blue-600 dark:fill-blue-400" style="font-family:Inter,sans-serif">Semarang HUB</text>
+							</g>
 
-						<!-- SURABAYA -->
-						<div class="absolute top-[61%] left-[42%] group cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
-							<div class="flex items-center justify-center w-7 h-7 rounded-full border border-amber-500 hover:border-amber-400 bg-amber-500/20">
-								<div class="w-2 h-2 bg-amber-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.8)]"></div>
-							</div>
-							<span class="absolute top-full mt-1 text-[10px] font-bold text-slate-700 dark:text-slate-300">Surabaya</span>
-							<div class="hidden group-hover:block absolute bottom-11 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-30">
-								<div class="flex items-center gap-2">
-									<div class="w-8 h-8 rounded bg-amber-500 flex items-center justify-center flex-shrink-0">
-										<i class="fa-solid fa-gears text-white text-xs"></i>
-									</div>
-									<div>
-										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">PT. Tekno Automasi Sby</p>
-										<p class="text-[10px] text-slate-500 dark:text-slate-400">Surabaya, Jawa Timur</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<g class="group cursor-pointer">
+								<circle cx="305" cy="315" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+								<circle cx="305" cy="315" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="305" y="340" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Jakarta</text>
+							</g>
 
-						<!-- MEDAN -->
-						<div class="absolute top-[22%] left-[12%] group cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
-							<div class="flex items-center justify-center w-7 h-7 rounded-full border border-purple-500 hover:border-purple-400 bg-purple-500/20">
-								<div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(168,85,247,0.8)]"></div>
-							</div>
-							<span class="absolute top-full mt-1 text-[10px] font-bold text-slate-700 dark:text-slate-300">Medan</span>
-							<div class="hidden group-hover:block absolute bottom-11 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-30">
-								<div class="flex items-center gap-2">
-									<div class="w-8 h-8 rounded bg-purple-500 flex items-center justify-center flex-shrink-0">
-										<i class="fa-solid fa-robot text-white text-xs"></i>
-									</div>
-									<div>
-										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">PT. Robotik Sumatra Utara</p>
-										<p class="text-[10px] text-slate-500 dark:text-slate-400">Medan, Sumatera Utara</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<g class="group cursor-pointer">
+								<circle cx="450" cy="332" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+								<circle cx="450" cy="332" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="450" y="357" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Surabaya</text>
+							</g>
 
-						<!-- MAKASSAR -->
-						<div class="absolute top-[52%] left-[53%] group cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
-							<div class="flex items-center justify-center w-7 h-7 rounded-full border border-rose-500 hover:border-rose-400 bg-rose-500/20">
-								<div class="w-2 h-2 bg-rose-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(244,63,94,0.8)]"></div>
-							</div>
-							<span class="absolute top-full mt-1 text-[10px] font-bold text-slate-700 dark:text-slate-300">Makassar</span>
-							<div class="hidden group-hover:block absolute bottom-11 left-1/2 -translate-x-1/2 w-48 bg-white dark:bg-slate-700 rounded-lg shadow-xl border border-slate-200 dark:border-slate-600 p-3 z-30">
-								<div class="flex items-center gap-2">
-									<div class="w-8 h-8 rounded bg-rose-500 flex items-center justify-center flex-shrink-0">
-										<i class="fa-solid fa-industry text-white text-xs"></i>
-									</div>
-									<div>
-										<p class="text-xs font-bold text-slate-800 dark:text-slate-200">PT. Kontrol Timur Indo</p>
-										<p class="text-[10px] text-slate-500 dark:text-slate-400">Makassar, Sulawesi Selatan</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<g class="group cursor-pointer">
+								<circle cx="132" cy="170" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+								<circle cx="132" cy="170" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="132" y="195" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Medan</text>
+							</g>
 
-						<!-- SVG Connection Lines Overlay -->
-						<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-							<path d="M 36 59 Q 32 50 29 58" fill="none" class="stroke-blue-400/50 stroke-[0.3] animate-draw-line" stroke-dasharray="4" stroke-dashoffset="4"/>
-							<path d="M 36 59 Q 25 35 12 22" fill="none" class="stroke-blue-400/50 stroke-[0.3] animate-draw-line" stroke-dasharray="4" stroke-dashoffset="4"/>
-							<path d="M 36 59 Q 45 45 53 52" fill="none" class="stroke-blue-400/50 stroke-[0.3] animate-draw-line" stroke-dasharray="4" stroke-dashoffset="4"/>
+							<g class="group cursor-pointer">
+								<circle cx="565" cy="272" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
+								<circle cx="565" cy="272" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="565" y="297" text-anchor="middle" class="text-[10px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Makassar</text>
+							</g>
 						</svg>
 					</div>
 				</div>
 
 				<!-- Partner Logo Carousel (Infinite Scroll) -->
-				<div class="scroll-mt-28 max-w-5xl mx-auto overflow-hidden">
-					<p class="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6">Mitra Kolaborasi Kami</p>
+				<div class="mt-12 max-w-5xl mx-auto overflow-hidden">
 					<div class="partner-marquee group relative">
 						<div class="flex animate-infinite-scroll group-hover:[animation-play-state:paused] w-max">
 							<!-- Set 1 -->
