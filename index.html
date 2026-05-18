@@ -196,6 +196,19 @@
 			animation: infinite-scroll 40s linear infinite;
 		}
 
+		@keyframes rolling {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-50%);
+			}
+		}
+
+		.animate-rolling {
+			animation: rolling 25s linear infinite;
+		}
+
 		/* Custom Splide Styles */
 		.splide__arrow {
 			background: white;
@@ -645,45 +658,24 @@
 					<div id="map" class="w-full h-[400px] rounded-2xl z-10"></div>
 				</div>
 
-				<!-- Partner Logo Carousel (Infinite Scroll) -->
-				<div class="mt-12 max-w-5xl mx-auto overflow-hidden">
-					<div class="partner-marquee group relative">
-						<div class="flex animate-infinite-scroll group-hover:[animation-play-state:paused] w-max">
-							<!-- Set 1 -->
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/hq720.jpg" alt="Logo ODOT Automation" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/Screenshot 2026-05-19 003937.png" alt="Logo PT Berkat Solusindo" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/unnamed.jpg" alt="Logo Wecon Indonesia" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/cropped-logo-ABS-circle-1.png" alt="Logo PT Anugrah Bersama" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama Saudara</span>
-							</div>
-							<!-- Set 2 (duplicate for seamless loop) -->
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/hq720.jpg" alt="Logo ODOT Automation" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/berkat-solusindo.png" alt="Logo PT Berkat Solusindo" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/unnamed.jpg" alt="Logo Wecon Indonesia" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
-							</div>
-							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/cropped-logo-ABS-circle-1.png" alt="Logo PT Anugrah Bersama" class="h-14 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama Saudara</span>
-							</div>
+				<!-- Partner Logo Carousel (Seamless Infinite Loop) -->
+				<div class="w-full overflow-hidden relative bg-slate-50 dark:bg-slate-900 py-8 border-y border-slate-200 dark:border-slate-800 mt-6 rounded-2xl">
+					<div class="flex flex-nowrap w-max animate-rolling hover:[animation-play-state:paused] gap-12">
+
+						<div class="flex flex-nowrap items-center gap-12 shrink-0">
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-blue-600 mr-3">od.t</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">ODOT Automation</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-emerald-600 mr-3">■</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">PT Berkat Solusindo</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-orange-500 mr-3">W</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">Wecon Indonesia</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-purple-600 mr-3">▲</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">PT Anugrah Bersama</span></div>
 						</div>
+
+						<div class="flex flex-nowrap items-center gap-12 shrink-0" aria-hidden="true">
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-blue-600 mr-3">od.t</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">ODOT Automation</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-emerald-600 mr-3">■</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">PT Berkat Solusindo</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-orange-500 mr-3">W</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">Wecon Indonesia</span></div>
+							<div class="flex items-center bg-white dark:bg-slate-800 py-4 px-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[260px] justify-center"><span class="font-extrabold text-xl text-purple-600 mr-3">▲</span><span class="font-bold text-lg text-slate-800 dark:text-slate-200">PT Anugrah Bersama</span></div>
+						</div>
+
 					</div>
 				</div>
 			</div>
