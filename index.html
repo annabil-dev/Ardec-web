@@ -107,19 +107,49 @@
 		}
 
 		/* Connection Line Animation */
-		@keyframes dash-flow {
+		@keyframes draw-line {
 			0% {
 				stroke-dashoffset: 200;
 			}
-			100% {
+			50% {
 				stroke-dashoffset: 0;
+			}
+			100% {
+				stroke-dashoffset: -200;
+			}
+		}
+
+		@keyframes hub-pulse {
+			0%, 100% {
+				r: 10;
+				opacity: 0.4;
+			}
+			50% {
+				r: 18;
+				opacity: 0;
 			}
 		}
 
 		.connection-line {
-			stroke-dasharray: 8 4;
+			stroke-dasharray: 12 6;
 			stroke-dashoffset: 200;
-			animation: dash-flow 3s linear infinite;
+			animation: draw-line 4s ease-in-out infinite;
+		}
+
+		.connection-delay-1 {
+			animation-delay: 0.6s;
+		}
+
+		.connection-delay-2 {
+			animation-delay: 1.2s;
+		}
+
+		.connection-delay-3 {
+			animation-delay: 1.8s;
+		}
+
+		.hub-ping {
+			animation: hub-pulse 2s ease-in-out infinite;
 		}
 
 		/* Blueprint Grid */
@@ -618,6 +648,184 @@
 			</div>
 		</section>
 
+		<!-- Jangkauan & Mitra Kolaborasi Section -->
+		<section id="mitra" class="scroll-mt-32 w-full py-12 sm:py-16 relative" data-aos="fade-up">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-white">Jangkauan & Mitra Kolaborasi</h2>
+					<p class="mt-3 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+						Jaringan kolaborasi ARDEC tersebar di berbagai kota besar Indonesia, menghubungkan inovasi otomasi dari Semarang ke seluruh nusantara.
+					</p>
+				</div>
+
+				<!-- Map Box Container -->
+				<div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-4 sm:p-8 max-w-5xl mx-auto border border-slate-200 dark:border-slate-700">
+					<div class="relative w-full aspect-[2.2/1]">
+						<svg viewBox="0 0 900 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+							<!-- Indonesia Map - More Realistic Paths -->
+							<!-- Sumatera -->
+							<path d="M95,85 C100,75 115,65 125,60 C135,55 145,58 152,62 C158,66 165,72 170,80 C175,88 178,98 180,108 C182,118 180,128 177,138 C174,148 168,158 163,168 C158,178 152,188 145,198 C138,208 130,218 122,225 C114,232 105,237 97,235 C89,233 82,224 78,215 C74,206 73,195 74,185 C75,175 78,165 80,155 C82,145 84,135 86,125 C88,115 90,105 92,95 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Jawa -->
+							<path d="M230,290 C240,286 255,283 270,281 C285,279 300,278 315,278 C330,278 345,279 360,280 C375,281 390,283 405,286 C420,289 432,293 438,297 C444,301 440,305 432,308 C424,311 410,313 395,314 C380,315 365,315 350,314 C335,313 320,312 305,310 C290,308 275,306 260,303 C245,300 232,297 225,294 C218,291 220,294 230,290 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Kalimantan -->
+							<path d="M340,65 C352,58 368,52 382,50 C396,48 410,50 420,56 C430,62 438,72 443,84 C448,96 450,110 449,124 C448,138 444,152 438,164 C432,176 424,186 414,193 C404,200 392,204 380,203 C368,202 356,196 346,188 C336,180 328,170 323,158 C318,146 316,132 317,120 C318,108 322,96 328,85 C334,74 340,65 340,65 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Sulawesi -->
+							<path d="M500,72 C506,65 515,60 522,62 C529,64 534,72 536,82 C538,92 537,104 533,114 C529,124 522,132 518,142 C514,152 513,162 516,170 C519,178 526,184 530,190 C534,196 532,200 526,202 C520,204 510,204 502,200 C494,196 488,188 484,178 C480,168 478,156 479,144 C480,132 484,120 489,110 C494,100 500,90 503,82 C506,74 500,72 500,72 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Papua -->
+							<path d="M680,90 C694,82 712,78 728,80 C744,82 758,90 768,102 C778,114 784,130 782,146 C780,162 770,178 756,188 C742,198 724,202 708,198 C692,194 678,182 670,168 C662,154 660,138 664,124 C668,110 678,98 680,90 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Bali & Nusa Tenggara -->
+							<path d="M450,298 C456,295 464,293 472,294 C480,295 488,298 496,299 C504,300 512,299 522,300 C532,301 544,303 554,305 C564,307 572,310 568,313 C564,316 548,318 534,318 C520,318 506,316 494,314 C482,312 470,309 460,306 C450,303 444,301 450,298 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+							<!-- Maluku -->
+							<path d="M590,155 C596,150 604,148 610,152 C616,156 620,164 618,172 C616,180 608,186 600,184 C592,182 586,174 586,166 C586,158 590,155 590,155 Z" class="fill-slate-200/60 dark:fill-slate-700/40 stroke-slate-300 dark:stroke-slate-600" stroke-width="0.8" fill-rule="evenodd"/>
+
+							<!-- Connection Lines (animated draw-line) -->
+							<!-- Semarang to Jakarta -->
+							<path d="M345,288 Q295,260 258,288" class="connection-line" fill="none" stroke="url(#lineGradient)" stroke-width="2.5" stroke-linecap="round"/>
+							<!-- Semarang to Surabaya -->
+							<path d="M345,288 Q375,272 410,290" class="connection-line connection-delay-1" fill="none" stroke="url(#lineGradient)" stroke-width="2.5" stroke-linecap="round"/>
+							<!-- Semarang to Medan -->
+							<path d="M345,288 Q240,190 135,165" class="connection-line connection-delay-2" fill="none" stroke="url(#lineGradient)" stroke-width="2.5" stroke-linecap="round"/>
+							<!-- Semarang to Makassar -->
+							<path d="M345,288 Q430,230 510,185" class="connection-line connection-delay-3" fill="none" stroke="url(#lineGradient)" stroke-width="2.5" stroke-linecap="round"/>
+
+							<!-- Gradient for lines -->
+							<defs>
+								<linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+									<stop offset="100%" stop-color="#06b6d4" stop-opacity="0.7"/>
+								</linearGradient>
+							</defs>
+
+							<!-- Semarang Hub -->
+							<g>
+								<circle cx="345" cy="288" r="10" class="fill-blue-500/30"/>
+								<circle cx="345" cy="288" r="10" class="fill-blue-400/40 hub-ping"/>
+								<circle cx="345" cy="288" r="6" class="fill-blue-500"/>
+								<circle cx="345" cy="288" r="3" class="fill-white"/>
+								<text x="345" y="275" text-anchor="middle" class="fill-blue-600 dark:fill-blue-400" style="font-size:9px;font-weight:700">HUB ARDEC</text>
+								<text x="345" y="308" text-anchor="middle" class="fill-slate-500 dark:fill-slate-400" style="font-size:8px">Semarang</text>
+							</g>
+
+							<!-- Jakarta Node -->
+							<g class="group cursor-pointer">
+								<circle cx="258" cy="288" r="5" class="fill-emerald-500 group-hover:fill-emerald-400 transition-colors"/>
+								<circle cx="258" cy="288" r="2.5" class="fill-white"/>
+								<text x="258" y="280" text-anchor="middle" class="fill-slate-600 dark:fill-slate-400" style="font-size:8px">Jakarta</text>
+								<!-- Tooltip -->
+								<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<rect x="188" y="240" width="140" height="35" rx="6" class="fill-white dark:fill-slate-700 stroke-slate-200 dark:stroke-slate-600" stroke-width="0.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+									<rect x="195" y="248" width="14" height="14" rx="3" class="fill-emerald-500"/>
+									<text x="215" y="258" class="fill-slate-800 dark:fill-slate-200" style="font-size:8px;font-weight:700">PT. Inovasi Otomasi Jkt</text>
+									<text x="215" y="269" class="fill-slate-500 dark:fill-slate-400" style="font-size:7px">Jakarta, DKI Jakarta</text>
+								</g>
+							</g>
+
+							<!-- Surabaya Node -->
+							<g class="group cursor-pointer">
+								<circle cx="410" cy="290" r="5" class="fill-amber-500 group-hover:fill-amber-400 transition-colors"/>
+								<circle cx="410" cy="290" r="2.5" class="fill-white"/>
+								<text x="410" y="282" text-anchor="middle" class="fill-slate-600 dark:fill-slate-400" style="font-size:8px">Surabaya</text>
+								<!-- Tooltip -->
+								<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<rect x="340" y="242" width="140" height="35" rx="6" class="fill-white dark:fill-slate-700 stroke-slate-200 dark:stroke-slate-600" stroke-width="0.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+									<rect x="347" y="250" width="14" height="14" rx="3" class="fill-amber-500"/>
+									<text x="367" y="260" class="fill-slate-800 dark:fill-slate-200" style="font-size:8px;font-weight:700">PT. Tekno Automasi Sby</text>
+									<text x="367" y="271" class="fill-slate-500 dark:fill-slate-400" style="font-size:7px">Surabaya, Jawa Timur</text>
+								</g>
+							</g>
+
+							<!-- Medan Node -->
+							<g class="group cursor-pointer">
+								<circle cx="135" cy="165" r="5" class="fill-purple-500 group-hover:fill-purple-400 transition-colors"/>
+								<circle cx="135" cy="165" r="2.5" class="fill-white"/>
+								<text x="135" y="157" text-anchor="middle" class="fill-slate-600 dark:fill-slate-400" style="font-size:8px">Medan</text>
+								<!-- Tooltip -->
+								<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<rect x="65" y="117" width="140" height="35" rx="6" class="fill-white dark:fill-slate-700 stroke-slate-200 dark:stroke-slate-600" stroke-width="0.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+									<rect x="72" y="125" width="14" height="14" rx="3" class="fill-purple-500"/>
+									<text x="92" y="135" class="fill-slate-800 dark:fill-slate-200" style="font-size:8px;font-weight:700">PT. Robotik Sumatra Utara</text>
+									<text x="92" y="146" class="fill-slate-500 dark:fill-slate-400" style="font-size:7px">Medan, Sumatera Utara</text>
+								</g>
+							</g>
+
+							<!-- Makassar Node -->
+							<g class="group cursor-pointer">
+								<circle cx="510" cy="185" r="5" class="fill-rose-500 group-hover:fill-rose-400 transition-colors"/>
+								<circle cx="510" cy="185" r="2.5" class="fill-white"/>
+								<text x="510" y="177" text-anchor="middle" class="fill-slate-600 dark:fill-slate-400" style="font-size:8px">Makassar</text>
+								<!-- Tooltip -->
+								<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<rect x="440" y="137" width="140" height="35" rx="6" class="fill-white dark:fill-slate-700 stroke-slate-200 dark:stroke-slate-600" stroke-width="0.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+									<rect x="447" y="145" width="14" height="14" rx="3" class="fill-rose-500"/>
+									<text x="467" y="155" class="fill-slate-800 dark:fill-slate-200" style="font-size:8px;font-weight:700">PT. Kontrol Timur Indo</text>
+									<text x="467" y="166" class="fill-slate-500 dark:fill-slate-400" style="font-size:7px">Makassar, Sulawesi Selatan</text>
+								</g>
+							</g>
+						</svg>
+					</div>
+				</div>
+
+				<!-- Partner Logo Carousel (Infinite Scroll) -->
+				<div class="mt-12 max-w-5xl mx-auto overflow-hidden">
+					<p class="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6">Mitra Kolaborasi Kami</p>
+					<div class="partner-marquee group relative">
+						<div class="flex animate-infinite-scroll group-hover:[animation-play-state:paused] w-max">
+							<!-- Set 1 -->
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
+									<i class="fa-solid fa-robot text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center">
+									<i class="fa-solid fa-microchip text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-orange-500 flex items-center justify-center">
+									<i class="fa-solid fa-industry text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+									<i class="fa-solid fa-gears text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama</span>
+							</div>
+							<!-- Set 2 (duplicate for seamless loop) -->
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
+									<i class="fa-solid fa-robot text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center">
+									<i class="fa-solid fa-microchip text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-orange-500 flex items-center justify-center">
+									<i class="fa-solid fa-industry text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
+							</div>
+							<div class="flex items-center gap-3 mx-8 flex-shrink-0">
+								<div class="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+									<i class="fa-solid fa-gears text-white text-sm"></i>
+								</div>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Contact & Footer -->
 		<section id="contact"
 			class="scroll-mt-22 w-full bg-slate-900 dark:bg-slate-100"
@@ -733,116 +941,8 @@
 		</section>
 	</main>
 
-	<!-- Jangkauan & Mitra Kolaborasi Section -->
-	<section id="mitra" class="w-full bg-slate-900 dark:bg-slate-100 relative overflow-hidden" data-aos="fade-up">
-		<div class="max-w-7xl mx-auto px-6 py-16">
-			<div class="text-center mb-12">
-				<h2 class="fluid-h2 font-extrabold text-white dark:text-slate-900">Jangkauan & Mitra Kolaborasi</h2>
-				<p class="mt-3 text-slate-300 dark:text-slate-600 max-w-2xl mx-auto">
-					Jaringan kolaborasi ARDEC tersebar di berbagai kota besar Indonesia, menghubungkan inovasi otomasi dari Semarang ke seluruh nusantara.
-				</p>
-			</div>
-
-			<!-- SVG Map Container -->
-			<div class="relative w-full max-w-4xl mx-auto aspect-[2/1]">
-				<!-- Simplified Indonesia SVG Map -->
-				<svg viewBox="0 0 800 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-					<!-- Map Background Islands (Stylized) -->
-					<!-- Sumatera -->
-					<path d="M80 120 L120 80 L160 90 L170 130 L150 180 L130 220 L100 260 L70 240 L60 200 L65 160 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-					<!-- Kalimantan -->
-					<path d="M320 60 L380 50 L420 80 L430 130 L410 180 L370 200 L330 180 L310 130 L300 90 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-					<!-- Sulawesi -->
-					<path d="M470 80 L500 60 L520 80 L510 120 L530 140 L520 170 L490 180 L480 160 L470 130 L460 100 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-					<!-- Jawa -->
-					<path d="M220 270 L280 260 L340 265 L390 270 L420 280 L400 295 L350 300 L290 295 L240 290 L210 285 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-					<!-- Papua -->
-					<path d="M620 100 L680 80 L740 90 L760 130 L740 170 L700 190 L660 180 L630 150 L620 120 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-					<!-- Bali & Nusa Tenggara -->
-					<path d="M430 290 L450 285 L470 290 L490 288 L520 292 L560 295 L550 305 L510 308 L470 305 L440 302 L425 298 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
-
-					<!-- Connection Lines (animated) -->
-					<!-- Semarang to Jakarta -->
-					<path d="M340 275 Q290 240 250 275" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2"/>
-					<!-- Semarang to Surabaya -->
-					<path d="M340 275 Q370 260 400 278" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 0.5s"/>
-					<!-- Semarang to Medan -->
-					<path d="M340 275 Q240 180 130 130" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 1s"/>
-					<!-- Semarang to Makassar -->
-					<path d="M340 275 Q420 220 500 160" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 1.5s"/>
-
-					<!-- Semarang Hub (Center) -->
-					<g class="cursor-pointer">
-						<circle cx="340" cy="275" r="8" class="fill-blue-500 dark:fill-blue-600"/>
-						<circle cx="340" cy="275" r="8" class="fill-blue-400 dark:fill-blue-500 animate-ping opacity-75"/>
-						<circle cx="340" cy="275" r="4" class="fill-white"/>
-						<text x="340" y="260" text-anchor="middle" class="fill-blue-300 dark:fill-blue-700 text-[10px] font-bold">HUB ARDEC</text>
-						<text x="340" y="295" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Semarang</text>
-					</g>
-
-					<!-- Jakarta Node -->
-					<g class="group cursor-pointer">
-						<circle cx="250" cy="275" r="6" class="fill-emerald-400 dark:fill-emerald-600 group-hover:fill-emerald-300 transition-colors duration-300"/>
-						<circle cx="250" cy="275" r="3" class="fill-white"/>
-						<text x="250" y="265" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Jakarta</text>
-						<!-- Tooltip -->
-						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(250, 230)">
-							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-emerald-500"/>
-							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Inovasi Otomasi Jkt</text>
-							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Jakarta, DKI Jakarta</text>
-						</g>
-					</g>
-
-					<!-- Surabaya Node -->
-					<g class="group cursor-pointer">
-						<circle cx="400" cy="278" r="6" class="fill-amber-400 dark:fill-amber-600 group-hover:fill-amber-300 transition-colors duration-300"/>
-						<circle cx="400" cy="278" r="3" class="fill-white"/>
-						<text x="400" y="268" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Surabaya</text>
-						<!-- Tooltip -->
-						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(400, 233)">
-							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-amber-500"/>
-							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Tekno Automasi Sby</text>
-							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Surabaya, Jawa Timur</text>
-						</g>
-					</g>
-
-					<!-- Medan Node -->
-					<g class="group cursor-pointer">
-						<circle cx="130" cy="130" r="6" class="fill-purple-400 dark:fill-purple-600 group-hover:fill-purple-300 transition-colors duration-300"/>
-						<circle cx="130" cy="130" r="3" class="fill-white"/>
-						<text x="130" y="120" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Medan</text>
-						<!-- Tooltip -->
-						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(130, 85)">
-							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-purple-500"/>
-							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Robotik Sumatra Utara</text>
-							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Medan, Sumatera Utara</text>
-						</g>
-					</g>
-
-					<!-- Makassar Node -->
-					<g class="group cursor-pointer">
-						<circle cx="500" cy="160" r="6" class="fill-rose-400 dark:fill-rose-600 group-hover:fill-rose-300 transition-colors duration-300"/>
-						<circle cx="500" cy="160" r="3" class="fill-white"/>
-						<text x="500" y="150" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Makassar</text>
-						<!-- Tooltip -->
-						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(500, 115)">
-							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-rose-500"/>
-							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Kontrol Timur Indo</text>
-							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Makassar, Sulawesi Selatan</text>
-						</g>
-					</g>
-				</svg>
-			</div>
-		</div>
-	</section>
-
-	<footer
-		class="w-full bg-slate-900 dark:bg-slate-100 border-t border-slate-700 dark:border-slate-300 transition-colors duration-300">
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-300 dark:text-slate-600 text-center">
+	<footer class="w-full bg-slate-300/50 dark:bg-[#0a0f1c]/80 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-600 dark:text-slate-400 text-center">
 			Copyright &copy; 2026 ARDEC All rights reserved.
 		</div>
 	</footer>
