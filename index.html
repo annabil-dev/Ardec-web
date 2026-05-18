@@ -628,47 +628,45 @@
 
 				<!-- Map Box Container -->
 				<div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-4 sm:p-8 max-w-5xl mx-auto border border-slate-200 dark:border-slate-700">
-					<div class="relative w-full overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-4 flex justify-center items-center">
-						<div class="relative w-full max-w-[800px] aspect-[1000/440] bg-contain bg-no-repeat bg-center"
-							style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Blank_map_of_Indonesia.svg/1024px-Blank_map_of_Indonesia.svg.png');">
+					<div class="relative w-full overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-900 p-6 flex justify-center items-center">
+						<svg viewBox="0 0 1000 440" class="w-full h-auto select-none z-10">
+							<path d="M 80 120 Q 180 200 280 280 L 250 300 L 130 200 Z" class="fill-slate-300 dark:fill-slate-700"/>
+							<path d="M 280 320 Q 400 330 520 340 L 520 350 L 280 335 Z" class="fill-slate-300 dark:fill-slate-700"/>
+							<path d="M 360 160 Q 450 150 480 220 L 450 280 L 350 260 Z" class="fill-slate-300 dark:fill-slate-700"/>
+							<path d="M 540 180 L 590 180 L 590 230 L 550 230 L 550 250 L 530 250 L 530 200 Z" class="fill-slate-300 dark:fill-slate-700"/>
+							<path d="M 750 230 Q 880 220 950 260 L 920 300 L 780 280 Z" class="fill-slate-300 dark:fill-slate-700"/>
 
-							<svg viewBox="0 0 1000 440" class="absolute inset-0 w-full h-full select-none z-10">
-								<path d="M 390 325 Q 345 290 305 315" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-								<path d="M 390 325 Q 260 200 132 170" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-								<path d="M 390 325 Q 420 325 450 332" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
-								<path d="M 390 325 Q 480 280 565 272" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-70" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 345 290 315 322" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-80" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 260 200 160 185" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-80" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 420 325 465 335" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-80" stroke-dasharray="8 4"/>
+							<path d="M 390 325 Q 480 280 555 220" fill="none" class="stroke-blue-500 stroke-2 animate-draw-line opacity-80" stroke-dasharray="8 4"/>
 
-								<g class="group cursor-pointer">
-									<circle cx="390" cy="325" r="14" class="fill-blue-500/20 stroke-blue-500 stroke-[1]"/>
-									<circle cx="390" cy="325" r="5" class="fill-blue-600 animate-pulse"/>
-									<text x="390" y="355" text-anchor="middle" class="text-[12px] font-extrabold fill-blue-600 dark:fill-blue-400" style="font-family:Inter,sans-serif">Semarang HUB</text>
-								</g>
-
-								<g class="group cursor-pointer">
-									<circle cx="305" cy="315" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-									<circle cx="305" cy="315" r="4" class="fill-orange-600 animate-pulse"/>
-									<text x="305" y="342" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Jakarta</text>
-								</g>
-
-								<g class="group cursor-pointer">
-									<circle cx="450" cy="332" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-									<circle cx="450" cy="332" r="4" class="fill-orange-600 animate-pulse"/>
-									<text x="450" y="360" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Surabaya</text>
-								</g>
-
-								<g class="group cursor-pointer">
-									<circle cx="132" cy="170" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-									<circle cx="132" cy="170" r="4" class="fill-orange-600 animate-pulse"/>
-									<text x="132" y="198" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Medan</text>
-								</g>
-
-								<g class="group cursor-pointer">
-									<circle cx="565" cy="272" r="12" class="fill-orange-500/20 stroke-orange-500 stroke-[1]"/>
-									<circle cx="565" cy="272" r="4" class="fill-orange-600 animate-pulse"/>
-									<text x="565" y="300" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Makassar</text>
-								</g>
-							</svg>
-						</div>
+							<g class="group cursor-pointer">
+								<circle cx="390" cy="325" r="12" class="fill-blue-500/30 stroke-blue-500 stroke-[1]"/>
+								<circle cx="390" cy="325" r="5" class="fill-blue-600 animate-pulse"/>
+								<text x="390" y="352" text-anchor="middle" class="text-[12px] font-extrabold fill-blue-600 dark:fill-blue-400" style="font-family:Inter,sans-serif">Semarang HUB</text>
+							</g>
+							<g class="group cursor-pointer">
+								<circle cx="315" cy="322" r="10" class="fill-orange-500/30 stroke-orange-500 stroke-[1]"/>
+								<circle cx="315" cy="322" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="315" y="345" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Jakarta</text>
+							</g>
+							<g class="group cursor-pointer">
+								<circle cx="465" cy="335" r="10" class="fill-orange-500/30 stroke-orange-500 stroke-[1]"/>
+								<circle cx="465" cy="335" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="465" y="358" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Surabaya</text>
+							</g>
+							<g class="group cursor-pointer">
+								<circle cx="160" cy="185" r="10" class="fill-orange-500/30 stroke-orange-500 stroke-[1]"/>
+								<circle cx="160" cy="185" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="160" y="208" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Medan</text>
+							</g>
+							<g class="group cursor-pointer">
+								<circle cx="555" cy="220" r="10" class="fill-orange-500/30 stroke-orange-500 stroke-[1]"/>
+								<circle cx="555" cy="220" r="4" class="fill-orange-600 animate-pulse"/>
+								<text x="555" y="243" text-anchor="middle" class="text-[11px] font-bold fill-slate-700 dark:fill-slate-300" style="font-family:Inter,sans-serif">Makassar</text>
+							</g>
+						</svg>
 					</div>
 				</div>
 
@@ -678,37 +676,37 @@
 						<div class="flex animate-infinite-scroll group-hover:[animation-play-state:paused] w-max">
 							<!-- Set 1 -->
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/hq720.jpg" alt="Logo ODOT Automation" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/hq720.jpg" alt="Logo ODOT Automation" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="https://placehold.co/150x50/e2e8f0/475569?text=Berkat" alt="Logo PT Berkat Solusindo" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/berkat-solusindo.png" alt="Logo PT Berkat Solusindo" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/unnamed.jpg" alt="Logo Wecon Indonesia" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/unnamed.jpg" alt="Logo Wecon Indonesia" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="/Partner/cropped-logo-ABS-circle-1.png" alt="Logo PT Anugrah Bersama" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/cropped-logo-ABS-circle-1.png" alt="Logo PT Anugrah Bersama" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama Saudara</span>
 							</div>
 							<!-- Set 2 (duplicate for seamless loop) -->
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="https://placehold.co/150x50/e2e8f0/475569?text=ODOT" alt="Logo ODOT Automation" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/hq720.jpg" alt="Logo ODOT Automation" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">ODOT Automation</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="https://placehold.co/150x50/e2e8f0/475569?text=Berkat" alt="Logo PT Berkat Solusindo" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/berkat-solusindo.png" alt="Logo PT Berkat Solusindo" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Berkat Solusindo</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="https://placehold.co/150x50/e2e8f0/475569?text=Wecon" alt="Logo Wecon Indonesia" class="h-10 w-auto object-contain mr-4 rounded"/>
+								<img src="/Partner/unnamed.jpg" alt="Logo Wecon Indonesia" class="h-14 w-auto object-contain mr-4 rounded"/>
 								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">Wecon Indonesia</span>
 							</div>
 							<div class="flex items-center mx-8 flex-shrink-0">
-								<img src="https://placehold.co/150x50/e2e8f0/475569?text=Anugrah" alt="Logo PT Anugrah Bersama" class="h-10 w-auto object-contain mr-4 rounded"/>
-								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama</span>
+								<img src="/Partner/cropped-logo-ABS-circle-1.png" alt="Logo PT Anugrah Bersama" class="h-14 w-auto object-contain mr-4 rounded"/>
+								<span class="font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap">PT Anugrah Bersama Saudara</span>
 							</div>
 						</div>
 					</div>
