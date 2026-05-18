@@ -106,6 +106,22 @@
 			z-index: 1;
 		}
 
+		/* Connection Line Animation */
+		@keyframes dash-flow {
+			0% {
+				stroke-dashoffset: 200;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		.connection-line {
+			stroke-dasharray: 8 4;
+			stroke-dashoffset: 200;
+			animation: dash-flow 3s linear infinite;
+		}
+
 		/* Blueprint Grid */
 		.bg-grid-pattern {
 			background-size: 40px 40px;
@@ -604,121 +620,230 @@
 
 		<!-- Contact & Footer -->
 		<section id="contact"
-			class="scroll-mt-22 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800"
+			class="scroll-mt-22 w-full bg-slate-900 dark:bg-slate-100"
 			data-aos="fade-up">
-			<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-				<div class="w-full md:w-7/12 lg:w-2/3">
-					<h2 class="fluid-h2 font-extrabold text-blue-950 dark:text-white">Mari Kolaborasi</h2>
-					<p class="mt-3 text-slate-900 dark:text-slate-300 leading-relaxed max-w-xl">
-						Diskusikan kebutuhan trainer, sistem kontrol, atau prototipe embedded untuk program edukasi,
-						riset, maupun kebutuhan produksi.
-					</p>
-
-					<div class="mt-8 space-y-4">
-						<div class="flex items-start gap-3">
-							<div class="mt-1 text-blue-900 dark:text-blue-400"><i class="fa-solid fa-location-dot"
-									aria-hidden="true"></i></div>
-							<div>
-								<div class="font-semibold text-blue-950 dark:text-blue-300">Alamat Lab/Workshop</div>
-								<a href="https://www.google.com/maps/search/?api=1&query=Gedung+Tefa+Sekolah+Vokasi+UNDIP"
-									target="_blank" rel="noopener noreferrer"
-									class="relative z-10 block transition-all duration-300 transform hover:-translate-y-1 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer text-slate-900 dark:text-slate-300">Gedung
-									Tefa Lantai 3 Jl. Gubernur
-									Mochtar, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275</a>
-							</div>
-						</div>
-
-						<div class="flex items-start gap-3">
-							<div class="mt-1 text-blue-900 dark:text-blue-400"><i class="fa-solid fa-envelope"
-									aria-hidden="true"></i></div>
-							<div>
-								<div class="font-semibold text-blue-950 dark:text-blue-300">Email</div>
-								<span class="inline-block text-slate-900 dark:text-slate-300">
-									info@ardec.example
-								</span>
-							</div>
-						</div>
-
-						<div class="flex items-start gap-3">
-							<div class="mt-1 text-blue-900 dark:text-blue-400"><i class="fa-brands fa-whatsapp"
-									aria-hidden="true"></i></div>
-							<div>
-								<div class="font-semibold text-blue-950 dark:text-blue-300">WhatsApp</div>
-								<span class="inline-block text-slate-900 dark:text-slate-300">
-									+62 812-9149-3497
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Social Media Icons -->
-					<div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
-						<p class="text-sm font-semibold text-slate-500 mb-3">Temukan kami di:</p>
-						<div class="flex flex-row gap-4 items-center">
-							<!-- Instagram -->
-							<a href="https://www.instagram.com/ardecundip.ofc?igsh=eXFrc3R6bzE2aHRl&utm_source=qr"
-								target="_blank" rel="noopener noreferrer"
-								class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:-translate-y-1 hover:shadow-lg hover:text-pink-500 dark:hover:text-pink-400 transition-all duration-300"
-								aria-label="Instagram">
-								<svg class="w-5 h-5" viewBox="0 0 448 512" fill="currentColor">
-									<path
-										d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-								</svg>
-							</a>
-							<!-- TikTok -->
-							<a href="https://www.tiktok.com/@ardecundip.ofc?_r=1&_t=ZS-96St4XMHnCm" target="_blank"
-								rel="noopener noreferrer"
-								class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:-translate-y-1 hover:shadow-lg hover:text-black dark:hover:text-white transition-all duration-300"
-								aria-label="TikTok">
-								<svg class="w-4 h-4" viewBox="0 0 448 512" fill="currentColor">
-									<path
-										d="M448 209.91a210.06 210.06 0 01-122.77-39.25V349.38A162.55 162.55 0 11185 188.31v89.89a74.62 74.62 0 1052.23 71.18V0l88 0a121.18 121.18 0 001.86 22.17h0A122.18 122.18 0 00381 102.39a121.43 121.43 0 0067 20.14Z" />
-								</svg>
-							</a>
-							<!-- Facebook -->
-							<a href="https://www.facebook.com/share/14YFiiTptwx/" target="_blank"
-								rel="noopener noreferrer"
-								class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:-translate-y-1 hover:shadow-lg hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
-								aria-label="Facebook">
-								<svg class="w-3 h-5" viewBox="0 0 320 512" fill="currentColor">
-									<path
-										d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-								</svg>
-							</a>
-							<!-- Shopee -->
-							<a href="#" target="_blank" rel="noopener noreferrer"
-								class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:-translate-y-1 hover:shadow-lg hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300"
-								aria-label="Shopee">
-								<svg class="w-5 h-5" viewBox="0 0 448 512" fill="currentColor">
-									<path
-										d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 110 48 24 24 0 110-48zm152 24a24 24 0 1148 0 24 24 0 11-48 0z" />
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="w-full md:w-5/12 lg:w-1/3" data-aos="fade-left">
-					<div
-						class="bg-grey dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 flex flex-col justify-center items-center text-center shadow-lg dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-						<p class="text-sm md:text-base text-slate-500 dark:text-slate-400 mb-6">
-							Butuh solusi otomasi atau Training Edukasi? Wujudkan bersama tim kami.
+			<div class="max-w-7xl mx-auto px-6 py-16">
+				<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+					<div class="w-full md:w-7/12 lg:w-2/3">
+						<h2 class="fluid-h2 font-extrabold text-white dark:text-slate-900">Mari Kolaborasi</h2>
+						<p class="mt-3 text-slate-200 dark:text-slate-700 leading-relaxed max-w-xl">
+							Diskusikan kebutuhan trainer, sistem kontrol, atau prototipe embedded untuk program edukasi,
+							riset, maupun kebutuhan produksi.
 						</p>
-						<button id="openModalBtn"
-							class="w-full relative z-50 inline-flex items-center justify-center gap-3 bg-blue-600 text-white font-bold text-lg rounded-xl px-10 py-5 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 transition-all duration-300">
-							Konsultasi Sekarang
-							<i class="fa-solid fa-arrow-right"></i>
-						</button>
+
+						<div class="mt-8 space-y-4">
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-400 dark:text-blue-600"><i class="fa-solid fa-location-dot"
+										aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-300 dark:text-blue-700">Alamat Lab/Workshop</div>
+									<a href="https://www.google.com/maps/search/?api=1&query=Gedung+Tefa+Sekolah+Vokasi+UNDIP"
+										target="_blank" rel="noopener noreferrer"
+										class="relative z-10 block transition-all duration-300 transform hover:-translate-y-1 hover:text-blue-400 dark:hover:text-blue-600 cursor-pointer text-slate-200 dark:text-slate-700">Gedung
+										Tefa Lantai 3 Jl. Gubernur
+										Mochtar, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275</a>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-400 dark:text-blue-600"><i class="fa-solid fa-envelope"
+										aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-300 dark:text-blue-700">Email</div>
+									<span class="inline-block text-slate-200 dark:text-slate-700">
+										info@ardec.example
+									</span>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-3">
+								<div class="mt-1 text-blue-400 dark:text-blue-600"><i class="fa-brands fa-whatsapp"
+										aria-hidden="true"></i></div>
+								<div>
+									<div class="font-semibold text-blue-300 dark:text-blue-700">WhatsApp</div>
+									<span class="inline-block text-slate-200 dark:text-slate-700">
+										+62 812-9149-3497
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Social Media Icons -->
+						<div class="mt-8 pt-6 border-t border-slate-700 dark:border-slate-300">
+							<p class="text-sm font-semibold text-slate-400 dark:text-slate-500 mb-3">Temukan kami di:</p>
+							<div class="flex flex-row gap-4 items-center">
+								<!-- Instagram -->
+								<a href="https://www.instagram.com/ardecundip.ofc?igsh=eXFrc3R6bzE2aHRl&utm_source=qr"
+									target="_blank" rel="noopener noreferrer"
+									class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 dark:bg-slate-200 text-slate-300 dark:text-slate-600 hover:-translate-y-1 hover:shadow-lg hover:text-pink-400 dark:hover:text-pink-500 transition-all duration-300"
+									aria-label="Instagram">
+									<svg class="w-5 h-5" viewBox="0 0 448 512" fill="currentColor">
+										<path
+											d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+									</svg>
+								</a>
+								<!-- TikTok -->
+								<a href="https://www.tiktok.com/@ardecundip.ofc?_r=1&_t=ZS-96St4XMHnCm" target="_blank"
+									rel="noopener noreferrer"
+									class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 dark:bg-slate-200 text-slate-300 dark:text-slate-600 hover:-translate-y-1 hover:shadow-lg hover:text-white dark:hover:text-black transition-all duration-300"
+									aria-label="TikTok">
+									<svg class="w-4 h-4" viewBox="0 0 448 512" fill="currentColor">
+										<path
+											d="M448 209.91a210.06 210.06 0 01-122.77-39.25V349.38A162.55 162.55 0 11185 188.31v89.89a74.62 74.62 0 1052.23 71.18V0l88 0a121.18 121.18 0 001.86 22.17h0A122.18 122.18 0 00381 102.39a121.43 121.43 0 0067 20.14Z" />
+									</svg>
+								</a>
+								<!-- Facebook -->
+								<a href="https://www.facebook.com/share/14YFiiTptwx/" target="_blank"
+									rel="noopener noreferrer"
+									class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 dark:bg-slate-200 text-slate-300 dark:text-slate-600 hover:-translate-y-1 hover:shadow-lg hover:text-blue-400 dark:hover:text-blue-600 transition-all duration-300"
+									aria-label="Facebook">
+									<svg class="w-3 h-5" viewBox="0 0 320 512" fill="currentColor">
+										<path
+											d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+									</svg>
+								</a>
+								<!-- Shopee -->
+								<a href="#" target="_blank" rel="noopener noreferrer"
+									class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 dark:bg-slate-200 text-slate-300 dark:text-slate-600 hover:-translate-y-1 hover:shadow-lg hover:text-orange-400 dark:hover:text-orange-500 transition-all duration-300"
+									aria-label="Shopee">
+									<svg class="w-5 h-5" viewBox="0 0 448 512" fill="currentColor">
+										<path
+											d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 110 48 24 24 0 110-48zm152 24a24 24 0 1148 0 24 24 0 11-48 0z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full md:w-5/12 lg:w-1/3" data-aos="fade-left">
+						<div
+							class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 flex flex-col justify-center items-center text-center shadow-lg dark:shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+							<p class="text-sm md:text-base text-slate-500 dark:text-slate-400 mb-6">
+								Butuh solusi otomasi atau Training Edukasi? Wujudkan bersama tim kami.
+							</p>
+							<button id="openModalBtn"
+								class="w-full relative z-50 inline-flex items-center justify-center gap-3 bg-blue-600 text-white font-bold text-lg rounded-xl px-10 py-5 hover:bg-blue-700 dark:hover:bg-blue-500 transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:border-blue-400 transition-all duration-300">
+								Konsultasi Sekarang
+								<i class="fa-solid fa-arrow-right"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 
+	<!-- Jangkauan & Mitra Kolaborasi Section -->
+	<section id="mitra" class="w-full bg-slate-900 dark:bg-slate-100 relative overflow-hidden" data-aos="fade-up">
+		<div class="max-w-7xl mx-auto px-6 py-16">
+			<div class="text-center mb-12">
+				<h2 class="fluid-h2 font-extrabold text-white dark:text-slate-900">Jangkauan & Mitra Kolaborasi</h2>
+				<p class="mt-3 text-slate-300 dark:text-slate-600 max-w-2xl mx-auto">
+					Jaringan kolaborasi ARDEC tersebar di berbagai kota besar Indonesia, menghubungkan inovasi otomasi dari Semarang ke seluruh nusantara.
+				</p>
+			</div>
+
+			<!-- SVG Map Container -->
+			<div class="relative w-full max-w-4xl mx-auto aspect-[2/1]">
+				<!-- Simplified Indonesia SVG Map -->
+				<svg viewBox="0 0 800 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+					<!-- Map Background Islands (Stylized) -->
+					<!-- Sumatera -->
+					<path d="M80 120 L120 80 L160 90 L170 130 L150 180 L130 220 L100 260 L70 240 L60 200 L65 160 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+					<!-- Kalimantan -->
+					<path d="M320 60 L380 50 L420 80 L430 130 L410 180 L370 200 L330 180 L310 130 L300 90 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+					<!-- Sulawesi -->
+					<path d="M470 80 L500 60 L520 80 L510 120 L530 140 L520 170 L490 180 L480 160 L470 130 L460 100 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+					<!-- Jawa -->
+					<path d="M220 270 L280 260 L340 265 L390 270 L420 280 L400 295 L350 300 L290 295 L240 290 L210 285 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+					<!-- Papua -->
+					<path d="M620 100 L680 80 L740 90 L760 130 L740 170 L700 190 L660 180 L630 150 L620 120 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+					<!-- Bali & Nusa Tenggara -->
+					<path d="M430 290 L450 285 L470 290 L490 288 L520 292 L560 295 L550 305 L510 308 L470 305 L440 302 L425 298 Z" class="fill-slate-200/50 dark:fill-slate-800/50 stroke-slate-400/30 dark:stroke-slate-600/30" stroke-width="1"/>
+
+					<!-- Connection Lines (animated) -->
+					<!-- Semarang to Jakarta -->
+					<path d="M340 275 Q290 240 250 275" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2"/>
+					<!-- Semarang to Surabaya -->
+					<path d="M340 275 Q370 260 400 278" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 0.5s"/>
+					<!-- Semarang to Medan -->
+					<path d="M340 275 Q240 180 130 130" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 1s"/>
+					<!-- Semarang to Makassar -->
+					<path d="M340 275 Q420 220 500 160" class="connection-line" fill="none" stroke="rgba(59,130,246,0.6)" stroke-width="2" style="animation-delay: 1.5s"/>
+
+					<!-- Semarang Hub (Center) -->
+					<g class="cursor-pointer">
+						<circle cx="340" cy="275" r="8" class="fill-blue-500 dark:fill-blue-600"/>
+						<circle cx="340" cy="275" r="8" class="fill-blue-400 dark:fill-blue-500 animate-ping opacity-75"/>
+						<circle cx="340" cy="275" r="4" class="fill-white"/>
+						<text x="340" y="260" text-anchor="middle" class="fill-blue-300 dark:fill-blue-700 text-[10px] font-bold">HUB ARDEC</text>
+						<text x="340" y="295" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Semarang</text>
+					</g>
+
+					<!-- Jakarta Node -->
+					<g class="group cursor-pointer">
+						<circle cx="250" cy="275" r="6" class="fill-emerald-400 dark:fill-emerald-600 group-hover:fill-emerald-300 transition-colors duration-300"/>
+						<circle cx="250" cy="275" r="3" class="fill-white"/>
+						<text x="250" y="265" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Jakarta</text>
+						<!-- Tooltip -->
+						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(250, 230)">
+							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-emerald-500"/>
+							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Inovasi Otomasi Jkt</text>
+							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Jakarta, DKI Jakarta</text>
+						</g>
+					</g>
+
+					<!-- Surabaya Node -->
+					<g class="group cursor-pointer">
+						<circle cx="400" cy="278" r="6" class="fill-amber-400 dark:fill-amber-600 group-hover:fill-amber-300 transition-colors duration-300"/>
+						<circle cx="400" cy="278" r="3" class="fill-white"/>
+						<text x="400" y="268" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Surabaya</text>
+						<!-- Tooltip -->
+						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(400, 233)">
+							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-amber-500"/>
+							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Tekno Automasi Sby</text>
+							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Surabaya, Jawa Timur</text>
+						</g>
+					</g>
+
+					<!-- Medan Node -->
+					<g class="group cursor-pointer">
+						<circle cx="130" cy="130" r="6" class="fill-purple-400 dark:fill-purple-600 group-hover:fill-purple-300 transition-colors duration-300"/>
+						<circle cx="130" cy="130" r="3" class="fill-white"/>
+						<text x="130" y="120" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Medan</text>
+						<!-- Tooltip -->
+						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(130, 85)">
+							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-purple-500"/>
+							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Robotik Sumatra Utara</text>
+							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Medan, Sumatera Utara</text>
+						</g>
+					</g>
+
+					<!-- Makassar Node -->
+					<g class="group cursor-pointer">
+						<circle cx="500" cy="160" r="6" class="fill-rose-400 dark:fill-rose-600 group-hover:fill-rose-300 transition-colors duration-300"/>
+						<circle cx="500" cy="160" r="3" class="fill-white"/>
+						<text x="500" y="150" text-anchor="middle" class="fill-slate-400 dark:fill-slate-500 text-[9px]">Makassar</text>
+						<!-- Tooltip -->
+						<g class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" transform="translate(500, 115)">
+							<rect x="-70" y="-35" width="140" height="50" rx="8" class="fill-white dark:fill-slate-800 stroke-slate-200 dark:stroke-slate-700" stroke-width="1" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+							<rect x="-60" y="-25" width="16" height="16" rx="3" class="fill-rose-500"/>
+							<text x="-38" y="-14" class="fill-slate-800 dark:fill-slate-200 text-[9px] font-bold">PT. Kontrol Timur Indo</text>
+							<text x="-38" y="0" class="fill-slate-500 dark:fill-slate-400 text-[8px]">Makassar, Sulawesi Selatan</text>
+						</g>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</section>
+
 	<footer
-		class="border-t-2 border-blue-200 dark:border-slate-800 bg-white/40 dark:bg-slate-900/60 backdrop-blur-md transition-colors duration-300">
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-900 dark:text-slate-400 text-center">
-			Copyright © 2026 ARDEC All rights reserved.
+		class="w-full bg-slate-900 dark:bg-slate-100 border-t border-slate-700 dark:border-slate-300 transition-colors duration-300">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-300 dark:text-slate-600 text-center">
+			Copyright &copy; 2026 ARDEC All rights reserved.
 		</div>
 	</footer>
 
